@@ -1,0 +1,91 @@
+####################################################################################################
+###   Dipole Analyser for VMD :: Probe systems for their dipole orientations and magnitudes.     ### 
+###   Written in TCL/TK to work with VMD.                                                        ###
+###											         ###	
+###								                                 ###
+###   Funding gratefully provided by Unilever plc and University of Southampton.                 ###
+###                                                                                              ###
+###   All code is "as is" and there is no implied warranty.                                      ###
+###                                                                                              ###
+###   Donovan (2012)	                                                                         ###
+###                                                                                              ###
+####################################################################################################
+
+What you need to run
+---------------------
+
+1. VMD
+
+2. The code package
+
+
+File structure
+--------------
+ ___________________________________________________________________________________________________
+|<Input files>            |                                                                         |
+|_________________________|_________________________________________________________________________|
+|dipole.tcl               |TCL code for measuring a dipole for a defined cluster of atoms in an     |
+|                         |atomistic or coarse-grained simulation. Run in conjunction with VMD      |
+|                         |to analyse trajectories for given systems. Make sure in the code you     |
+|                         |specify the atoms of interest (see below).                               |
+|                         |                                                                         |  
+|_________________________|_________________________________________________________________________|
+|md.xtc                   |This is the portable format for trajectories from gromacs. It contains   |
+|                         |positional information on the molecules.                                 |
+|_________________________|_________________________________________________________________________|
+|md.gro                   |This is a fixed-column coordinate file format first used in the GROMOS   | 
+|                         |simulation package.                                                      |
+|_________________________|_________________________________________________________________________|
+|md.psf                   |Crucial for the calculation of the dipoles - charges must be read in and |
+|                         |we either use a pre-generated or custom generated version of the .psf to |
+|                         |supply those charges. We enlose some simple code in the Python folder to |
+|                         |assist with conversion between PS to PSF files.
+|___________________________________________________________________________________________________|
+|<Output files>           |                                                                         |
+|_________________________|_________________________________________________________________________|
+|amide.txt                |The output histogram of dipole orientation using cos(theta) as the       |
+|			  |order parameter. You can rename this whatever that you like in the code. |
+|                         |                                                                         |
+|_________________________|_________________________________________________________________________|
+
+
+What the code does
+------------------
+
+Often in simulations we want to understand the orientation and magnitudes of dipoles. This code groups up
+atoms (user definable) into clusters and then performs basic statistical analysis on the computed dipole to
+give values for the magnitude and direction of these dipoles. This may be useful in understanding countless
+interactions and physical behaviour.
+
+The code was designed for lipid systems but that does not mean it will not work with other systems - you 
+simply have specific the atomic groups that you are interested in. We have used as your base system the
+ceramide lipid which is composed into groups - the head groups having dipoles which we loosely name: amide
+and glycerol for housekeeping.
+
+
+Running the code
+----------------
+
+1. You must put in details of the atoms you want to examine in the code. These are currently named: amide and
+glycerol. You can rename these or pick up the atoms of interest and put these back in the code.
+
+	set amide [atomselect top "name C25 N23 H24 O26 and (resid $i)" frame $frame]
+	set glycerol [atomselect top "name C19 C16 C15 C14 C20 O21 H22 and (resid $i)" frame $frame]
+
+2. You must specify which grouping to look at in the following lines:
+
+	set dipa [measure dipole $amide -debye]
+
+This means you will only compute one dipole at a time over a number of frames but you can easily change this
+if you so desire to incorporate more than one measurement simultaneously.
+
+3. Open VMD with your files. For example:
+
+	vmd md.xtc md.gro md.psf
+
+4. Copy and paste the code into the VMD TCL window or run in the usual way.
+
+
+
+
+
