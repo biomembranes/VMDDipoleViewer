@@ -1,0 +1,11 @@
+PSF
+       4 !NTITLE
+ REMARKS TOPOLOGY CREATED BY PERL SCRIPT (MARC BAADEN)
+ REMARKS contact baaden smplinux.de
+
+       3 !NATOM
+       1 MAIN 1    SOL  OW   OW    -0.8200000000  15.9994000000
+       2 MAIN 1    SOL  HW1  HW     0.4100000000   1.0080000000
+       3 MAIN 1    SOL  HW2  HW     0.4100000000   1.0080000000
+
+      -5 !NBOND: bonds

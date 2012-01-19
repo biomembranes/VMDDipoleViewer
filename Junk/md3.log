@@ -1,0 +1,3364 @@
+Log file opened on Tue Feb  8 13:31:55 2011
+Host: n003  pid: 13729  nodeid: 0  nnodes:  8
+The Gromacs distribution was built Tue Jun 15 22:33:42 BST 2010 by
+akinshina.a@cl1n015 (Linux 2.6.16.46-0.12-smp x86_64)
+
+
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                   Groningen Machine for Chemical Simulation
+
+                            :-)  VERSION 4.0.7  (-:
+
+
+      Written by David van der Spoel, Erik Lindahl, Berk Hess, and others.
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+             Copyright (c) 2001-2008, The GROMACS development team,
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+             :-)  /home/akinshina.a/gromacs_mpi/bin/mdrun_mpi  (-:
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+parameters of the run:
+   integrator           = md
+   nsteps               = 50000000
+   init_step            = 0
+   ns_type              = Grid
+   nstlist              = 5
+   ndelta               = 2
+   nstcomm              = 1
+   comm_mode            = Linear
+   nstlog               = 500000
+   nstxout              = 500000
+   nstvout              = 500000
+   nstfout              = 0
+   nstenergy            = 500000
+   nstxtcout            = 0
+   init_t               = 0
+   delta_t              = 0.002
+   xtcprec              = 1000
+   nkx                  = 35
+   nky                  = 30
+   nkz                  = 77
+   pme_order            = 4
+   ewald_rtol           = 1e-05
+   ewald_geometry       = 0
+   epsilon_surface      = 0
+   optimize_fft         = FALSE
+   ePBC                 = xyz
+   bPeriodicMols        = FALSE
+   bContinuation        = TRUE
+   bShakeSOR            = FALSE
+   etc                  = Nose-Hoover
+   epc                  = Parrinello-Rahman
+   epctype              = Anisotropic
+   tau_p                = 5
+   ref_p (3x3):
+      ref_p[    0]={ 1.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref_p[    1]={ 0.00000e+00,  1.00000e+00,  0.00000e+00}
+      ref_p[    2]={ 0.00000e+00,  0.00000e+00,  1.00000e+00}
+   compress (3x3):
+      compress[    0]={ 4.50000e-05,  0.00000e+00,  0.00000e+00}
+      compress[    1]={ 0.00000e+00,  4.50000e-05,  0.00000e+00}
+      compress[    2]={ 0.00000e+00,  0.00000e+00,  4.50000e-05}
+   refcoord_scaling     = No
+   posres_com (3):
+      posres_com[0]= 0.00000e+00
+      posres_com[1]= 0.00000e+00
+      posres_com[2]= 0.00000e+00
+   posres_comB (3):
+      posres_comB[0]= 0.00000e+00
+      posres_comB[1]= 0.00000e+00
+      posres_comB[2]= 0.00000e+00
+   andersen_seed        = 815131
+   rlist                = 1.2
+   rtpi                 = 0.05
+   coulombtype          = PME
+   rcoulomb_switch      = 0
+   rcoulomb             = 1.2
+   vdwtype              = Cut-off
+   rvdw_switch          = 0
+   rvdw                 = 1.2
+   epsilon_r            = 1
+   epsilon_rf           = 1
+   tabext               = 1
+   implicit_solvent     = No
+   gb_algorithm         = Still
+   gb_epsilon_solvent   = 80
+   nstgbradii           = 1
+   rgbradii             = 2
+   gb_saltconc          = 0
+   gb_obc_alpha         = 1
+   gb_obc_beta          = 0.8
+   gb_obc_gamma         = 4.85
+   sa_surface_tension   = 2.092
+   DispCorr             = EnerPres
+   free_energy          = no
+   init_lambda          = 0
+   sc_alpha             = 0
+   sc_power             = 0
+   sc_sigma             = 0.3
+   delta_lambda         = 0
+   nwall                = 0
+   wall_type            = 9-3
+   wall_atomtype[0]     = -1
+   wall_atomtype[1]     = -1
+   wall_density[0]      = 0
+   wall_density[1]      = 0
+   wall_ewald_zfac      = 3
+   pull                 = no
+   disre                = No
+   disre_weighting      = Conservative
+   disre_mixed          = FALSE
+   dr_fc                = 1000
+   dr_tau               = 0
+   nstdisreout          = 100
+   orires_fc            = 0
+   orires_tau           = 0
+   nstorireout          = 100
+   dihre-fc             = 1000
+   em_stepsize          = 0.01
+   em_tol               = 10
+   niter                = 20
+   fc_stepsize          = 0
+   nstcgsteep           = 1000
+   nbfgscorr            = 10
+   ConstAlg             = Lincs
+   shake_tol            = 0.0001
+   lincs_order          = 4
+   lincs_warnangle      = 30
+   lincs_iter           = 1
+   bd_fric              = 0
+   ld_seed              = 1993
+   cos_accel            = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   userint1             = 0
+   userint2             = 0
+   userint3             = 0
+   userint4             = 0
+   userreal1            = 0
+   userreal2            = 0
+   userreal3            = 0
+   userreal4            = 0
+grpopts:
+   nrdf:       12669       31497
+   ref_t:         350         350
+   tau_t:         0.1         0.1
+anneal:          No          No
+ann_npoints:           0           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp_flags[  0]: 0
+   efield-x:
+      n = 0
+   efield-xt:
+      n = 0
+   efield-y:
+      n = 0
+   efield-yt:
+      n = 0
+   efield-z:
+      n = 0
+   efield-zt:
+      n = 0
+   bQMMM                = FALSE
+   QMconstraints        = 0
+   QMMMscheme           = 0
+   scalefactor          = 1
+qm_opts:
+   ngQM                 = 0
+
+Initializing Domain Decomposition on 8 nodes
+Dynamic load balancing: auto
+Will sort the charge groups at every domain (re)decomposition
+Initial maximum inter charge-group distances:
+    two-body bonded interactions: 0.499 nm, LJ-14, atoms 4031 4034
+  multi-body bonded interactions: 0.499 nm, Improper Dih., atoms 4034 4031
+Minimum cell size due to bonded interactions: 0.549 nm
+Maximum distance for 5 constraints, at 120 deg. angles, all-trans: 0.765 nm
+Estimated maximum distance required for P-LINCS: 0.765 nm
+This distance will limit the DD cell size, you can override this with -rcon
+Domain decomposition grid 4 x 2 x 1, separate PME nodes 0
+Domain decomposition nodeid 0, coordinates 0 0 0
+
+Table routines are used for coulomb: TRUE
+Table routines are used for vdw:     FALSE
+Will do PME sum in reciprocal space.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essman, L. Perela, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.384195 nm for Ewald
+Cut-off's:   NS: 1.2   Coulomb: 1.2   LJ: 1.2
+System total charge: 0.000
+Generated table with 1100 data points for Ewald.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for LJ6.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for LJ12.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Enabling SPC water optimization for 5250 molecules.
+
+Configuring nonbonded kernels...
+Testing x86_64 SSE support... present.
+
+
+
+Initializing Parallel LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess
+P-LINCS: A Parallel Linear Constraint Solver for molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 116-122
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 6144
+There are inter charge-group constraints,
+will communicate selected coordinates each lincs iteration
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+
+Linking all bonded interactions to atoms
+There are 18176 inter charge-group exclusions,
+will use an extra communication step for exclusion forces for PME
+
+The initial number of communication pulses is: X 1 Y 1
+The initial domain decomposition cell size is: X 1.36 nm Y 2.37 nm
+
+The maximum allowed distance for charge groups involved in interactions is:
+                 non-bonded interactions           1.200 nm
+(the following are initial values, they could change due to box deformation)
+            two-body bonded interactions  (-rdd)   1.200 nm
+          multi-body bonded interactions  (-rdd)   1.200 nm
+  atoms separated by up to 5 constraints  (-rcon)  1.362 nm
+
+When dynamic load balancing gets turned on, these settings will change to:
+The maximum number of communication pulses is: X 2 Y 1
+The minimum size for domain decomposition cells is 0.931 nm
+The requested allowed shrink of DD cells (option -dds) is: 0.80
+The allowed shrink of domain decomposition cells is: X 0.68 Y 0.51
+The maximum allowed distance for charge groups involved in interactions is:
+                 non-bonded interactions           1.200 nm
+            two-body bonded interactions  (-rdd)   1.200 nm
+          multi-body bonded interactions  (-rdd)   0.931 nm
+  atoms separated by up to 5 constraints  (-rcon)  0.931 nm
+
+
+Making 2D domain decomposition grid 4 x 2 x 1, home cell index 0 0 0
+
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  CER2
+  1:  SOL
+There are: 22022 Atoms
+Charge group distribution at step 0: 1345 1333 1332 1309 1333 1342 1311 1321
+Grid: 4 x 7 x 18 cells
+Initial temperature: 352.524 K
+
+Started mdrun on node 0 Tue Feb  8 13:31:55 2011
+
+           Step           Time         Lambda
+              0        0.00000        0.00000
+
+Long Range LJ corr.: <C6> 1.1235e-03
+Long Range LJ corr.: Epot   -2118.75, Pres:   -225.749, Vir:    2118.75
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.98242e+03    1.68967e+03    8.01035e+03    4.95826e+02    4.54291e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19932e+04   -1.60175e+03   -2.11875e+03   -2.35922e+05   -2.23086e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30326e+05    6.46833e+04   -1.65642e+05    3.52288e+02    3.45899e+02
+  Cons. rmsd ()
+    5.87924e-06
+
+DD  step 4 load imb.: force  1.4%
+
+DD  step 499999 load imb.: force  3.4%
+
+           Step           Time         Lambda
+         500000     1000.00006        0.00000
+
+Writing checkpoint, step 500000 at Tue Feb  8 15:16:46 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.92659e+03    1.63536e+03    8.17201e+03    5.29212e+02    4.51264e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19557e+04   -2.08386e+03   -2.11636e+03   -2.34555e+05   -2.22973e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29382e+05    6.39732e+04   -1.65409e+05    3.48420e+02    1.68507e+02
+  Cons. rmsd ()
+    6.02408e-06
+
+Writing checkpoint, step 500005 at Tue Feb  8 15:16:46 2011
+
+Writing checkpoint, step 500010 at Tue Feb  8 15:16:46 2011
+
+Writing checkpoint, step 500015 at Tue Feb  8 15:16:46 2011
+
+Writing checkpoint, step 500020 at Tue Feb  8 15:16:46 2011
+
+DD  step 999999 load imb.: force  3.2%
+
+           Step           Time         Lambda
+        1000000     2000.00012        0.00000
+
+Writing checkpoint, step 1000000 at Tue Feb  8 17:01:57 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.90706e+03    1.73121e+03    7.78511e+03    4.52204e+02    4.94515e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17986e+04   -1.80099e+03   -2.11910e+03   -2.34684e+05   -2.21963e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29632e+05    6.40433e+04   -1.65588e+05    3.48802e+02    8.52129e+01
+  Cons. rmsd ()
+    6.18083e-06
+
+Writing checkpoint, step 1000005 at Tue Feb  8 17:01:58 2011
+
+Writing checkpoint, step 1000010 at Tue Feb  8 17:01:58 2011
+
+Writing checkpoint, step 1000015 at Tue Feb  8 17:01:58 2011
+
+Writing checkpoint, step 1000020 at Tue Feb  8 17:01:58 2011
+
+Writing checkpoint, step 1000025 at Tue Feb  8 17:01:58 2011
+
+Writing checkpoint, step 1000030 at Tue Feb  8 17:01:58 2011
+
+DD  step 1499999 load imb.: force  3.8%
+
+           Step           Time         Lambda
+        1500000     3000.00024        0.00000
+
+Writing checkpoint, step 1500000 at Tue Feb  8 18:46:58 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89179e+03    1.71036e+03    8.09724e+03    4.96324e+02    4.24465e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20650e+04   -2.14514e+03   -2.11313e+03   -2.34821e+05   -2.22847e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29679e+05    6.43574e+04   -1.65321e+05    3.50512e+02   -5.03702e+01
+  Cons. rmsd ()
+    6.19988e-06
+
+Writing checkpoint, step 1500005 at Tue Feb  8 18:46:58 2011
+
+Writing checkpoint, step 1500010 at Tue Feb  8 18:46:58 2011
+
+Writing checkpoint, step 1500015 at Tue Feb  8 18:46:58 2011
+
+Writing checkpoint, step 1500020 at Tue Feb  8 18:46:58 2011
+
+Writing checkpoint, step 1500025 at Tue Feb  8 18:46:58 2011
+
+Writing checkpoint, step 1500030 at Tue Feb  8 18:46:58 2011
+
+DD  step 1999999 load imb.: force  1.7%
+
+           Step           Time         Lambda
+        2000000     4000.00024        0.00000
+
+Writing checkpoint, step 2000000 at Tue Feb  8 20:32:07 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.02551e+03    1.80303e+03    7.88338e+03    5.07737e+02    3.66243e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17798e+04   -1.42213e+03   -2.11482e+03   -2.35870e+05   -2.22533e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30295e+05    6.39433e+04   -1.66351e+05    3.48257e+02   -1.39206e+02
+  Cons. rmsd ()
+    6.13787e-06
+
+Writing checkpoint, step 2000005 at Tue Feb  8 20:32:07 2011
+
+Writing checkpoint, step 2000010 at Tue Feb  8 20:32:07 2011
+
+Writing checkpoint, step 2000015 at Tue Feb  8 20:32:07 2011
+
+Writing checkpoint, step 2000020 at Tue Feb  8 20:32:07 2011
+
+Writing checkpoint, step 2000025 at Tue Feb  8 20:32:07 2011
+
+Writing checkpoint, step 2000030 at Tue Feb  8 20:32:07 2011
+
+DD  step 2499999 load imb.: force  1.3%
+
+           Step           Time         Lambda
+        2500000     5000.00000        0.00000
+
+Writing checkpoint, step 2500000 at Tue Feb  8 22:17:25 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89401e+03    1.72858e+03    8.26314e+03    4.97880e+02    4.14888e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19243e+04   -2.50326e+03   -2.12353e+03   -2.34755e+05   -2.22651e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29924e+05    6.45697e+04   -1.65354e+05    3.51669e+02    1.23031e+02
+  Cons. rmsd ()
+    6.29626e-06
+
+Writing checkpoint, step 2500005 at Tue Feb  8 22:17:25 2011
+
+Writing checkpoint, step 2500010 at Tue Feb  8 22:17:25 2011
+
+Writing checkpoint, step 2500015 at Tue Feb  8 22:17:25 2011
+
+Writing checkpoint, step 2500020 at Tue Feb  8 22:17:25 2011
+
+Writing checkpoint, step 2500025 at Tue Feb  8 22:17:25 2011
+
+Writing checkpoint, step 2500030 at Tue Feb  8 22:17:25 2011
+
+DD  step 2999999 load imb.: force  2.9%
+
+           Step           Time         Lambda
+        3000000     6000.00049        0.00000
+
+Writing checkpoint, step 3000000 at Wed Feb  9 00:02:25 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.42867e+03    1.73894e+03    7.60056e+03    4.87828e+02    4.40847e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21144e+04   -2.54508e+03   -2.13301e+03   -2.34994e+05   -2.23378e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31199e+05    6.38742e+04   -1.67325e+05    3.47881e+02   -1.45713e+02
+  Cons. rmsd ()
+    6.10494e-06
+
+Writing checkpoint, step 3000005 at Wed Feb  9 00:02:25 2011
+
+Writing checkpoint, step 3000010 at Wed Feb  9 00:02:25 2011
+
+Writing checkpoint, step 3000015 at Wed Feb  9 00:02:25 2011
+
+Writing checkpoint, step 3000020 at Wed Feb  9 00:02:25 2011
+
+Writing checkpoint, step 3000025 at Wed Feb  9 00:02:25 2011
+
+Writing checkpoint, step 3000030 at Wed Feb  9 00:02:25 2011
+
+DD  step 3499999 load imb.: force  1.9%
+
+           Step           Time         Lambda
+        3500000     7000.00049        0.00000
+
+Writing checkpoint, step 3500000 at Wed Feb  9 01:47:38 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.82132e+03    1.62504e+03    7.98897e+03    4.05577e+02    4.46402e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20582e+04   -2.23608e+03   -2.13180e+03   -2.35617e+05   -2.22346e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30874e+05    6.43872e+04   -1.66487e+05    3.50675e+02    1.18396e+02
+  Cons. rmsd ()
+    6.23180e-06
+
+Writing checkpoint, step 3500005 at Wed Feb  9 01:47:38 2011
+
+Writing checkpoint, step 3500010 at Wed Feb  9 01:47:38 2011
+
+Writing checkpoint, step 3500015 at Wed Feb  9 01:47:38 2011
+
+Writing checkpoint, step 3500020 at Wed Feb  9 01:47:38 2011
+
+Writing checkpoint, step 3500025 at Wed Feb  9 01:47:38 2011
+
+Writing checkpoint, step 3500030 at Wed Feb  9 01:47:38 2011
+
+DD  step 3999999 load imb.: force  2.8%
+
+           Step           Time         Lambda
+        4000000     8000.00049        0.00000
+
+Writing checkpoint, step 4000000 at Wed Feb  9 03:32:40 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.08650e+03    1.69004e+03    8.11614e+03    4.50399e+02    4.63191e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.16928e+04   -1.57656e+03   -2.11682e+03   -2.35748e+05   -2.22300e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30172e+05    6.48340e+04   -1.65338e+05    3.53108e+02    1.41026e+02
+  Cons. rmsd ()
+    6.42159e-06
+
+Writing checkpoint, step 4000005 at Wed Feb  9 03:32:40 2011
+
+Writing checkpoint, step 4000010 at Wed Feb  9 03:32:40 2011
+
+Writing checkpoint, step 4000015 at Wed Feb  9 03:32:40 2011
+
+Writing checkpoint, step 4000020 at Wed Feb  9 03:32:40 2011
+
+Writing checkpoint, step 4000025 at Wed Feb  9 03:32:40 2011
+
+Writing checkpoint, step 4000030 at Wed Feb  9 03:32:40 2011
+
+DD  step 4499999 load imb.: force  2.5%
+
+           Step           Time         Lambda
+        4500000     9000.00000        0.00000
+
+Writing checkpoint, step 4500000 at Wed Feb  9 05:17:44 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.84802e+03    1.68714e+03    7.97057e+03    4.70553e+02    4.69565e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18846e+04   -1.66474e+03   -2.11198e+03   -2.35112e+05   -2.22075e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29765e+05    6.48499e+04   -1.64915e+05    3.53195e+02    8.63668e+01
+  Cons. rmsd ()
+    6.63224e-06
+
+Writing checkpoint, step 4500005 at Wed Feb  9 05:17:44 2011
+
+Writing checkpoint, step 4500010 at Wed Feb  9 05:17:44 2011
+
+Writing checkpoint, step 4500015 at Wed Feb  9 05:17:44 2011
+
+Writing checkpoint, step 4500020 at Wed Feb  9 05:17:44 2011
+
+Writing checkpoint, step 4500025 at Wed Feb  9 05:17:44 2011
+
+Writing checkpoint, step 4500030 at Wed Feb  9 05:17:44 2011
+
+DD  step 4999999 load imb.: force  1.9%
+
+           Step           Time         Lambda
+        5000000    10000.00000        0.00000
+
+Writing checkpoint, step 5000000 at Wed Feb  9 07:02:44 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.03073e+03    1.62561e+03    7.92860e+03    4.67439e+02    4.87483e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20125e+04   -1.73511e+03   -2.11937e+03   -2.34964e+05   -2.22737e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29540e+05    6.43583e+04   -1.65182e+05    3.50517e+02    1.99653e+02
+  Cons. rmsd ()
+    6.02581e-06
+
+Writing checkpoint, step 5000005 at Wed Feb  9 07:02:44 2011
+
+Writing checkpoint, step 5000010 at Wed Feb  9 07:02:45 2011
+
+Writing checkpoint, step 5000015 at Wed Feb  9 07:02:45 2011
+
+Writing checkpoint, step 5000020 at Wed Feb  9 07:02:45 2011
+
+Writing checkpoint, step 5000025 at Wed Feb  9 07:02:45 2011
+
+Writing checkpoint, step 5000030 at Wed Feb  9 07:02:45 2011
+
+DD  step 5499999 load imb.: force  1.1%
+
+           Step           Time         Lambda
+        5500000    11000.00098        0.00000
+
+Writing checkpoint, step 5500000 at Wed Feb  9 08:47:42 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89550e+03    1.58929e+03    7.79453e+03    4.74823e+02    4.92974e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21762e+04   -1.82954e+03   -2.12049e+03   -2.35140e+05   -2.23265e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29993e+05    6.47939e+04   -1.65199e+05    3.52890e+02    1.31780e+02
+  Cons. rmsd ()
+    5.67707e-06
+
+Writing checkpoint, step 5500005 at Wed Feb  9 08:47:42 2011
+
+Writing checkpoint, step 5500010 at Wed Feb  9 08:47:42 2011
+
+Writing checkpoint, step 5500015 at Wed Feb  9 08:47:42 2011
+
+Writing checkpoint, step 5500020 at Wed Feb  9 08:47:42 2011
+
+Writing checkpoint, step 5500025 at Wed Feb  9 08:47:42 2011
+
+Writing checkpoint, step 5500030 at Wed Feb  9 08:47:42 2011
+
+DD  step 5999999 load imb.: force  1.8%
+
+           Step           Time         Lambda
+        6000000    12000.00098        0.00000
+
+Writing checkpoint, step 6000000 at Wed Feb  9 10:32:32 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.44913e+03    1.71374e+03    7.97536e+03    4.05432e+02    3.71263e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21716e+04   -1.81574e+03   -2.11200e+03   -2.35286e+05   -2.23118e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30439e+05    6.43823e+04   -1.66057e+05    3.50648e+02    7.52096e+01
+  Cons. rmsd ()
+    6.35093e-06
+
+Writing checkpoint, step 6000005 at Wed Feb  9 10:32:32 2011
+
+Writing checkpoint, step 6000010 at Wed Feb  9 10:32:32 2011
+
+Writing checkpoint, step 6000015 at Wed Feb  9 10:32:32 2011
+
+Writing checkpoint, step 6000020 at Wed Feb  9 10:32:32 2011
+
+Writing checkpoint, step 6000025 at Wed Feb  9 10:32:32 2011
+
+Writing checkpoint, step 6000030 at Wed Feb  9 10:32:32 2011
+
+DD  step 6499999 load imb.: force  2.8%
+
+           Step           Time         Lambda
+        6500000    13000.00098        0.00000
+
+Writing checkpoint, step 6500000 at Wed Feb  9 12:17:36 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.73570e+03    1.65418e+03    7.76158e+03    4.56724e+02    3.70946e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19018e+04   -3.08958e+03   -2.12290e+03   -2.34517e+05   -2.23241e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31172e+05    6.34514e+04   -1.67721e+05    3.45578e+02   -3.89129e+02
+  Cons. rmsd ()
+    6.76617e-06
+
+Writing checkpoint, step 6500005 at Wed Feb  9 12:17:36 2011
+
+Writing checkpoint, step 6500010 at Wed Feb  9 12:17:36 2011
+
+Writing checkpoint, step 6500015 at Wed Feb  9 12:17:37 2011
+
+Writing checkpoint, step 6500020 at Wed Feb  9 12:17:37 2011
+
+Writing checkpoint, step 6500025 at Wed Feb  9 12:17:37 2011
+
+Writing checkpoint, step 6500030 at Wed Feb  9 12:17:37 2011
+
+DD  step 6999999 load imb.: force  2.8%
+
+           Step           Time         Lambda
+        7000000    14000.00098        0.00000
+
+Writing checkpoint, step 7000000 at Wed Feb  9 14:02:44 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.99506e+03    1.70406e+03    7.82791e+03    4.73233e+02    5.01306e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21872e+04   -2.20000e+03   -2.13294e+03   -2.34901e+05   -2.23261e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29871e+05    6.38026e+04   -1.66068e+05    3.47491e+02    2.37767e+02
+  Cons. rmsd ()
+    6.54251e-06
+
+Writing checkpoint, step 7000005 at Wed Feb  9 14:02:44 2011
+
+Writing checkpoint, step 7000010 at Wed Feb  9 14:02:44 2011
+
+Writing checkpoint, step 7000015 at Wed Feb  9 14:02:44 2011
+
+Writing checkpoint, step 7000020 at Wed Feb  9 14:02:44 2011
+
+Writing checkpoint, step 7000025 at Wed Feb  9 14:02:44 2011
+
+Writing checkpoint, step 7000030 at Wed Feb  9 14:02:44 2011
+
+DD  step 7499999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+        7500000    15000.00098        0.00000
+
+Writing checkpoint, step 7500000 at Wed Feb  9 15:47:52 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89347e+03    1.70000e+03    8.00187e+03    4.87345e+02    3.96898e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18925e+04   -1.61838e+03   -2.12376e+03   -2.35578e+05   -2.22680e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30216e+05    6.46666e+04   -1.65549e+05    3.52196e+02   -5.28362e+01
+  Cons. rmsd ()
+    6.46733e-06
+
+Writing checkpoint, step 7500005 at Wed Feb  9 15:47:52 2011
+
+Writing checkpoint, step 7500010 at Wed Feb  9 15:47:52 2011
+
+Writing checkpoint, step 7500015 at Wed Feb  9 15:47:52 2011
+
+Writing checkpoint, step 7500020 at Wed Feb  9 15:47:52 2011
+
+Writing checkpoint, step 7500025 at Wed Feb  9 15:47:52 2011
+
+Writing checkpoint, step 7500030 at Wed Feb  9 15:47:52 2011
+
+DD  step 7999999 load imb.: force  3.0%
+
+           Step           Time         Lambda
+        8000000    16000.00098        0.00000
+
+Writing checkpoint, step 8000000 at Wed Feb  9 17:32:59 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.71899e+03    1.63324e+03    8.03081e+03    5.14125e+02    4.83993e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20271e+04   -2.10863e+03   -2.12345e+03   -2.35067e+05   -2.22975e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30188e+05    6.46009e+04   -1.65587e+05    3.51839e+02   -1.44654e+02
+  Cons. rmsd ()
+    5.87133e-06
+
+Writing checkpoint, step 8000005 at Wed Feb  9 17:32:59 2011
+
+Writing checkpoint, step 8000010 at Wed Feb  9 17:33:00 2011
+
+Writing checkpoint, step 8000015 at Wed Feb  9 17:33:00 2011
+
+Writing checkpoint, step 8000020 at Wed Feb  9 17:33:00 2011
+
+Writing checkpoint, step 8000025 at Wed Feb  9 17:33:00 2011
+
+Writing checkpoint, step 8000030 at Wed Feb  9 17:33:00 2011
+
+DD  step 8499999 load imb.: force  3.8%
+
+           Step           Time         Lambda
+        8500000    17000.00000        0.00000
+
+Writing checkpoint, step 8500000 at Wed Feb  9 19:17:57 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.84073e+03    1.80473e+03    8.14558e+03    4.91641e+02    3.97152e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20134e+04   -1.42914e+03   -2.10707e+03   -2.35740e+05   -2.23339e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29916e+05    6.44120e+04   -1.65504e+05    3.50810e+02   -2.48550e+02
+  Cons. rmsd ()
+    6.52130e-06
+
+Writing checkpoint, step 8500005 at Wed Feb  9 19:17:57 2011
+
+Writing checkpoint, step 8500010 at Wed Feb  9 19:17:57 2011
+
+Writing checkpoint, step 8500015 at Wed Feb  9 19:17:58 2011
+
+Writing checkpoint, step 8500020 at Wed Feb  9 19:17:58 2011
+
+Writing checkpoint, step 8500025 at Wed Feb  9 19:17:58 2011
+
+Writing checkpoint, step 8500030 at Wed Feb  9 19:17:58 2011
+
+DD  step 8999999 load imb.: force  3.3%
+
+           Step           Time         Lambda
+        9000000    18000.00000        0.00000
+
+Writing checkpoint, step 9000000 at Wed Feb  9 21:03:05 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.77913e+03    1.64092e+03    8.15699e+03    4.52009e+02    5.07565e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18406e+04   -2.73311e+02   -2.12430e+03   -2.38305e+05   -2.23130e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31638e+05    6.40790e+04   -1.67559e+05    3.48996e+02    1.80039e+02
+  Cons. rmsd ()
+    6.22846e-06
+
+Writing checkpoint, step 9000005 at Wed Feb  9 21:03:05 2011
+
+Writing checkpoint, step 9000010 at Wed Feb  9 21:03:05 2011
+
+Writing checkpoint, step 9000015 at Wed Feb  9 21:03:05 2011
+
+Writing checkpoint, step 9000020 at Wed Feb  9 21:03:05 2011
+
+Writing checkpoint, step 9000025 at Wed Feb  9 21:03:05 2011
+
+Writing checkpoint, step 9000030 at Wed Feb  9 21:03:05 2011
+
+DD  step 9499999 load imb.: force  1.8%
+
+           Step           Time         Lambda
+        9500000    19000.00000        0.00000
+
+Writing checkpoint, step 9500000 at Wed Feb  9 22:48:19 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.12464e+03    1.65395e+03    7.60302e+03    5.51189e+02    4.10394e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19877e+04   -1.44200e+03   -2.11778e+03   -2.35773e+05   -2.23275e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30330e+05    6.40678e+04   -1.66262e+05    3.48935e+02    1.46037e+02
+  Cons. rmsd ()
+    6.53539e-06
+
+Writing checkpoint, step 9500005 at Wed Feb  9 22:48:19 2011
+
+Writing checkpoint, step 9500010 at Wed Feb  9 22:48:19 2011
+
+Writing checkpoint, step 9500015 at Wed Feb  9 22:48:19 2011
+
+Writing checkpoint, step 9500020 at Wed Feb  9 22:48:19 2011
+
+Writing checkpoint, step 9500025 at Wed Feb  9 22:48:19 2011
+
+Writing checkpoint, step 9500030 at Wed Feb  9 22:48:19 2011
+
+DD  step 9999999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       10000000    20000.00000        0.00000
+
+Writing checkpoint, step 10000000 at Thu Feb 10 00:33:22 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.83438e+03    1.79606e+03    8.33847e+03    4.41669e+02    4.22192e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18494e+04   -2.16791e+03   -2.12412e+03   -2.35556e+05   -2.22485e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30414e+05    6.36900e+04   -1.66724e+05    3.46878e+02   -1.52556e+02
+  Cons. rmsd ()
+    6.24479e-06
+
+Writing checkpoint, step 10000005 at Thu Feb 10 00:33:22 2011
+
+Writing checkpoint, step 10000010 at Thu Feb 10 00:33:22 2011
+
+Writing checkpoint, step 10000015 at Thu Feb 10 00:33:22 2011
+
+Writing checkpoint, step 10000020 at Thu Feb 10 00:33:22 2011
+
+Writing checkpoint, step 10000025 at Thu Feb 10 00:33:22 2011
+
+Writing checkpoint, step 10000030 at Thu Feb 10 00:33:22 2011
+
+DD  step 10499999 load imb.: force  2.8%
+
+           Step           Time         Lambda
+       10500000    21000.00195        0.00000
+
+Writing checkpoint, step 10500000 at Thu Feb 10 02:18:50 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.66809e+03    1.63427e+03    7.89289e+03    4.85559e+02    4.80507e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18996e+04   -2.07239e+03   -2.11241e+03   -2.34945e+05   -2.22662e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30335e+05    6.48240e+04   -1.65511e+05    3.53054e+02   -2.89325e+02
+  Cons. rmsd ()
+    6.25152e-06
+
+Writing checkpoint, step 10500005 at Thu Feb 10 02:18:51 2011
+
+Writing checkpoint, step 10500010 at Thu Feb 10 02:18:51 2011
+
+Writing checkpoint, step 10500015 at Thu Feb 10 02:18:51 2011
+
+Writing checkpoint, step 10500020 at Thu Feb 10 02:18:51 2011
+
+Writing checkpoint, step 10500025 at Thu Feb 10 02:18:51 2011
+
+Writing checkpoint, step 10500030 at Thu Feb 10 02:18:51 2011
+
+DD  step 10999999 load imb.: force  3.1%
+
+           Step           Time         Lambda
+       11000000    22000.00195        0.00000
+
+Writing checkpoint, step 11000000 at Thu Feb 10 04:04:17 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.84039e+03    1.60092e+03    7.88474e+03    4.85250e+02    4.42822e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19411e+04   -1.59494e+03   -2.12296e+03   -2.35745e+05   -2.22854e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30553e+05    6.43569e+04   -1.66196e+05    3.50510e+02    4.99865e+01
+  Cons. rmsd ()
+    5.98522e-06
+
+Writing checkpoint, step 11000005 at Thu Feb 10 04:04:17 2011
+
+Writing checkpoint, step 11000010 at Thu Feb 10 04:04:17 2011
+
+Writing checkpoint, step 11000015 at Thu Feb 10 04:04:17 2011
+
+Writing checkpoint, step 11000020 at Thu Feb 10 04:04:17 2011
+
+Writing checkpoint, step 11000025 at Thu Feb 10 04:04:17 2011
+
+Writing checkpoint, step 11000030 at Thu Feb 10 04:04:17 2011
+
+DD  step 11499999 load imb.: force  1.8%
+
+           Step           Time         Lambda
+       11500000    23000.00195        0.00000
+
+Writing checkpoint, step 11500000 at Thu Feb 10 05:49:11 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.73495e+03    1.73487e+03    8.13647e+03    5.06553e+02    4.66607e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.16731e+04   -7.21362e+02   -2.11440e+03   -2.36980e+05   -2.21845e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30748e+05    6.48308e+04   -1.65917e+05    3.53091e+02    3.19978e+01
+  Cons. rmsd ()
+    6.27795e-06
+
+Writing checkpoint, step 11500005 at Thu Feb 10 05:49:11 2011
+
+Writing checkpoint, step 11500010 at Thu Feb 10 05:49:11 2011
+
+Writing checkpoint, step 11500015 at Thu Feb 10 05:49:11 2011
+
+Writing checkpoint, step 11500020 at Thu Feb 10 05:49:11 2011
+
+Writing checkpoint, step 11500025 at Thu Feb 10 05:49:11 2011
+
+Writing checkpoint, step 11500030 at Thu Feb 10 05:49:11 2011
+
+DD  step 11999999 load imb.: force  1.2%
+
+           Step           Time         Lambda
+       12000000    24000.00195        0.00000
+
+Writing checkpoint, step 12000000 at Thu Feb 10 07:34:04 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.80892e+03    1.64938e+03    7.83187e+03    4.74332e+02    4.04440e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18237e+04   -9.12852e+02   -2.12126e+03   -2.35796e+05   -2.22163e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30054e+05    6.39118e+04   -1.66142e+05    3.48086e+02    1.47244e+02
+  Cons. rmsd ()
+    6.52399e-06
+
+Writing checkpoint, step 12000005 at Thu Feb 10 07:34:04 2011
+
+Writing checkpoint, step 12000010 at Thu Feb 10 07:34:04 2011
+
+Writing checkpoint, step 12000015 at Thu Feb 10 07:34:05 2011
+
+Writing checkpoint, step 12000020 at Thu Feb 10 07:34:05 2011
+
+Writing checkpoint, step 12000025 at Thu Feb 10 07:34:05 2011
+
+Writing checkpoint, step 12000030 at Thu Feb 10 07:34:05 2011
+
+DD  step 12499999 load imb.: force  3.0%
+
+           Step           Time         Lambda
+       12500000    25000.00195        0.00000
+
+Writing checkpoint, step 12500000 at Thu Feb 10 09:19:13 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.82381e+03    1.65564e+03    7.93750e+03    4.75644e+02    4.99908e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18807e+04   -3.29824e+03   -2.11798e+03   -2.33182e+05   -2.21625e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29487e+05    6.44324e+04   -1.65055e+05    3.50921e+02   -2.74154e+02
+  Cons. rmsd ()
+    6.07374e-06
+
+Writing checkpoint, step 12500005 at Thu Feb 10 09:19:13 2011
+
+Writing checkpoint, step 12500010 at Thu Feb 10 09:19:13 2011
+
+Writing checkpoint, step 12500015 at Thu Feb 10 09:19:13 2011
+
+Writing checkpoint, step 12500020 at Thu Feb 10 09:19:14 2011
+
+Writing checkpoint, step 12500025 at Thu Feb 10 09:19:14 2011
+
+Writing checkpoint, step 12500030 at Thu Feb 10 09:19:14 2011
+
+DD  step 12999999 load imb.: force  2.1%
+
+           Step           Time         Lambda
+       13000000    26000.00195        0.00000
+
+Writing checkpoint, step 13000000 at Thu Feb 10 11:04:12 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.92153e+03    1.70704e+03    8.21509e+03    5.19946e+02    4.91404e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18179e+04   -7.90761e+02   -2.11707e+03   -2.36454e+05   -2.22336e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29923e+05    6.43748e+04   -1.65548e+05    3.50608e+02    1.75008e+02
+  Cons. rmsd ()
+    6.28318e-06
+
+Writing checkpoint, step 13000005 at Thu Feb 10 11:04:12 2011
+
+Writing checkpoint, step 13000010 at Thu Feb 10 11:04:12 2011
+
+Writing checkpoint, step 13000015 at Thu Feb 10 11:04:12 2011
+
+Writing checkpoint, step 13000020 at Thu Feb 10 11:04:12 2011
+
+Writing checkpoint, step 13000025 at Thu Feb 10 11:04:13 2011
+
+Writing checkpoint, step 13000030 at Thu Feb 10 11:04:13 2011
+
+DD  step 13499999 load imb.: force  1.9%
+
+           Step           Time         Lambda
+       13500000    27000.00195        0.00000
+
+Writing checkpoint, step 13500000 at Thu Feb 10 12:48:53 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.15135e+03    1.63390e+03    8.13945e+03    4.75536e+02    3.92103e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17989e+04   -2.07483e+03   -2.11778e+03   -2.35118e+05   -2.22282e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29948e+05    6.36150e+04   -1.66333e+05    3.46469e+02   -1.44791e+02
+  Cons. rmsd ()
+    6.10584e-06
+
+Writing checkpoint, step 13500005 at Thu Feb 10 12:48:53 2011
+
+Writing checkpoint, step 13500010 at Thu Feb 10 12:48:53 2011
+
+Writing checkpoint, step 13500015 at Thu Feb 10 12:48:53 2011
+
+Writing checkpoint, step 13500020 at Thu Feb 10 12:48:53 2011
+
+Writing checkpoint, step 13500025 at Thu Feb 10 12:48:53 2011
+
+Writing checkpoint, step 13500030 at Thu Feb 10 12:48:53 2011
+
+DD  step 13999999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       14000000    28000.00195        0.00000
+
+Writing checkpoint, step 14000000 at Thu Feb 10 14:33:35 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.95989e+03    1.68294e+03    8.25776e+03    4.93271e+02    4.77589e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18328e+04   -2.30180e+03   -2.11320e+03   -2.34387e+05   -2.22891e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29387e+05    6.39403e+04   -1.65447e+05    3.48241e+02    1.17030e+02
+  Cons. rmsd ()
+    6.16074e-06
+
+Writing checkpoint, step 14000005 at Thu Feb 10 14:33:35 2011
+
+Writing checkpoint, step 14000010 at Thu Feb 10 14:33:35 2011
+
+Writing checkpoint, step 14000015 at Thu Feb 10 14:33:35 2011
+
+Writing checkpoint, step 14000020 at Thu Feb 10 14:33:35 2011
+
+Writing checkpoint, step 14000025 at Thu Feb 10 14:33:35 2011
+
+Writing checkpoint, step 14000030 at Thu Feb 10 14:33:35 2011
+
+DD  step 14499999 load imb.: force  3.6%
+
+           Step           Time         Lambda
+       14500000    29000.00195        0.00000
+
+Writing checkpoint, step 14500000 at Thu Feb 10 16:18:29 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.92215e+03    1.83534e+03    7.98906e+03    4.74613e+02    4.63740e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18249e+04   -2.17508e+03   -2.12813e+03   -2.35240e+05   -2.22987e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30332e+05    6.41995e+04   -1.66132e+05    3.49653e+02   -1.32751e+02
+  Cons. rmsd ()
+    6.25482e-06
+
+Writing checkpoint, step 14500005 at Thu Feb 10 16:18:29 2011
+
+Writing checkpoint, step 14500010 at Thu Feb 10 16:18:29 2011
+
+Writing checkpoint, step 14500015 at Thu Feb 10 16:18:29 2011
+
+Writing checkpoint, step 14500020 at Thu Feb 10 16:18:29 2011
+
+Writing checkpoint, step 14500025 at Thu Feb 10 16:18:30 2011
+
+Writing checkpoint, step 14500030 at Thu Feb 10 16:18:30 2011
+
+DD  step 14999999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       15000000    30000.00195        0.00000
+
+Writing checkpoint, step 15000000 at Thu Feb 10 18:03:21 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.01426e+03    1.74194e+03    8.11371e+03    4.38869e+02    4.61919e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18344e+04   -2.36923e+03   -2.11288e+03   -2.34425e+05   -2.22133e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29515e+05    6.37395e+04   -1.65776e+05    3.47147e+02   -5.07809e+01
+  Cons. rmsd ()
+    6.26404e-06
+
+Writing checkpoint, step 15000005 at Thu Feb 10 18:03:22 2011
+
+Writing checkpoint, step 15000010 at Thu Feb 10 18:03:22 2011
+
+Writing checkpoint, step 15000015 at Thu Feb 10 18:03:22 2011
+
+Writing checkpoint, step 15000020 at Thu Feb 10 18:03:22 2011
+
+Writing checkpoint, step 15000025 at Thu Feb 10 18:03:22 2011
+
+Writing checkpoint, step 15000030 at Thu Feb 10 18:03:22 2011
+
+DD  step 15499999 load imb.: force  2.0%
+
+           Step           Time         Lambda
+       15500000    31000.00195        0.00000
+
+Writing checkpoint, step 15500000 at Thu Feb 10 19:48:26 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.87555e+03    1.76170e+03    8.01076e+03    4.18278e+02    4.52052e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17515e+04   -2.07050e+03   -2.12172e+03   -2.34224e+05   -2.22184e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29365e+05    6.40217e+04   -1.65343e+05    3.48684e+02    1.66972e+02
+  Cons. rmsd ()
+    5.61486e-06
+
+Writing checkpoint, step 15500005 at Thu Feb 10 19:48:26 2011
+
+Writing checkpoint, step 15500010 at Thu Feb 10 19:48:27 2011
+
+Writing checkpoint, step 15500015 at Thu Feb 10 19:48:27 2011
+
+Writing checkpoint, step 15500020 at Thu Feb 10 19:48:27 2011
+
+Writing checkpoint, step 15500025 at Thu Feb 10 19:48:27 2011
+
+Writing checkpoint, step 15500030 at Thu Feb 10 19:48:27 2011
+
+DD  step 15999999 load imb.: force  1.0%
+
+           Step           Time         Lambda
+       16000000    32000.00195        0.00000
+
+Writing checkpoint, step 16000000 at Thu Feb 10 21:33:36 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.93673e+03    1.77687e+03    8.01410e+03    4.69362e+02    4.15960e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20018e+04   -7.72896e+02   -2.12753e+03   -2.36835e+05   -2.22527e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30373e+05    6.45032e+04   -1.65870e+05    3.51307e+02    2.02476e+02
+  Cons. rmsd ()
+    6.32184e-06
+
+Writing checkpoint, step 16000005 at Thu Feb 10 21:33:36 2011
+
+Writing checkpoint, step 16000010 at Thu Feb 10 21:33:36 2011
+
+Writing checkpoint, step 16000015 at Thu Feb 10 21:33:36 2011
+
+Writing checkpoint, step 16000020 at Thu Feb 10 21:33:36 2011
+
+Writing checkpoint, step 16000025 at Thu Feb 10 21:33:36 2011
+
+Writing checkpoint, step 16000030 at Thu Feb 10 21:33:36 2011
+
+DD  step 16499999 load imb.: force  2.0%
+
+           Step           Time         Lambda
+       16500000    33000.00000        0.00000
+
+Writing checkpoint, step 16500000 at Thu Feb 10 23:18:45 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.88396e+03    1.65918e+03    7.84820e+03    4.79925e+02    5.11578e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17716e+04   -8.89195e+02   -2.11200e+03   -2.35829e+05   -2.21984e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29874e+05    6.48753e+04   -1.64999e+05    3.53333e+02   -1.56410e+01
+  Cons. rmsd ()
+    6.24000e-06
+
+Writing checkpoint, step 16500005 at Thu Feb 10 23:18:46 2011
+
+Writing checkpoint, step 16500010 at Thu Feb 10 23:18:46 2011
+
+Writing checkpoint, step 16500015 at Thu Feb 10 23:18:46 2011
+
+Writing checkpoint, step 16500020 at Thu Feb 10 23:18:46 2011
+
+Writing checkpoint, step 16500025 at Thu Feb 10 23:18:46 2011
+
+Writing checkpoint, step 16500030 at Thu Feb 10 23:18:46 2011
+
+DD  step 16999999 load imb.: force  3.0%
+
+           Step           Time         Lambda
+       17000000    34000.00000        0.00000
+
+Writing checkpoint, step 17000000 at Fri Feb 11 01:04:09 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.88375e+03    1.72676e+03    7.95053e+03    5.05286e+02    4.04330e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.16354e+04   -2.37585e+03   -2.10954e+03   -2.34504e+05   -2.21738e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30057e+05    6.43514e+04   -1.65706e+05    3.50480e+02   -2.52629e+02
+  Cons. rmsd ()
+    6.02786e-06
+
+Writing checkpoint, step 17000005 at Fri Feb 11 01:04:09 2011
+
+Writing checkpoint, step 17000010 at Fri Feb 11 01:04:09 2011
+
+Writing checkpoint, step 17000015 at Fri Feb 11 01:04:09 2011
+
+Writing checkpoint, step 17000020 at Fri Feb 11 01:04:10 2011
+
+Writing checkpoint, step 17000025 at Fri Feb 11 01:04:10 2011
+
+Writing checkpoint, step 17000030 at Fri Feb 11 01:04:10 2011
+
+DD  step 17499999 load imb.: force  2.3%
+
+           Step           Time         Lambda
+       17500000    35000.00000        0.00000
+
+Writing checkpoint, step 17500000 at Fri Feb 11 02:49:09 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.87408e+03    1.75373e+03    8.02310e+03    4.67709e+02    4.60612e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19355e+04   -1.20640e+03   -2.12829e+03   -2.36751e+05   -2.22820e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30853e+05    6.42885e+04   -1.66565e+05    3.50137e+02   -2.00742e+01
+  Cons. rmsd ()
+    6.28534e-06
+
+Writing checkpoint, step 17500005 at Fri Feb 11 02:49:09 2011
+
+Writing checkpoint, step 17500010 at Fri Feb 11 02:49:09 2011
+
+Writing checkpoint, step 17500015 at Fri Feb 11 02:49:09 2011
+
+Writing checkpoint, step 17500020 at Fri Feb 11 02:49:09 2011
+
+Writing checkpoint, step 17500025 at Fri Feb 11 02:49:10 2011
+
+Writing checkpoint, step 17500030 at Fri Feb 11 02:49:10 2011
+
+DD  step 17999999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       18000000    36000.00000        0.00000
+
+Writing checkpoint, step 18000000 at Fri Feb 11 04:34:24 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.67232e+03    1.73754e+03    8.09486e+03    4.99043e+02    4.04922e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18605e+04   -2.28814e+03   -2.12702e+03   -2.34576e+05   -2.22606e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29982e+05    6.40465e+04   -1.65936e+05    3.48819e+02   -1.04316e+02
+  Cons. rmsd ()
+    6.04705e-06
+
+Writing checkpoint, step 18000005 at Fri Feb 11 04:34:24 2011
+
+Writing checkpoint, step 18000010 at Fri Feb 11 04:34:24 2011
+
+Writing checkpoint, step 18000015 at Fri Feb 11 04:34:24 2011
+
+Writing checkpoint, step 18000020 at Fri Feb 11 04:34:24 2011
+
+Writing checkpoint, step 18000025 at Fri Feb 11 04:34:24 2011
+
+Writing checkpoint, step 18000030 at Fri Feb 11 04:34:24 2011
+
+DD  step 18499999 load imb.: force  1.4%
+
+           Step           Time         Lambda
+       18500000    37000.00000        0.00000
+
+Writing checkpoint, step 18500000 at Fri Feb 11 06:19:36 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.68182e+03    1.61509e+03    7.58774e+03    4.65514e+02    5.35915e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17880e+04   -2.10580e+03   -2.11873e+03   -2.34465e+05   -2.21881e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30203e+05    6.45751e+04   -1.65628e+05    3.51698e+02    4.67945e+01
+  Cons. rmsd ()
+    6.63554e-06
+
+Writing checkpoint, step 18500005 at Fri Feb 11 06:19:36 2011
+
+Writing checkpoint, step 18500010 at Fri Feb 11 06:19:37 2011
+
+Writing checkpoint, step 18500015 at Fri Feb 11 06:19:37 2011
+
+Writing checkpoint, step 18500020 at Fri Feb 11 06:19:37 2011
+
+Writing checkpoint, step 18500025 at Fri Feb 11 06:19:37 2011
+
+Writing checkpoint, step 18500030 at Fri Feb 11 06:19:37 2011
+
+DD  step 18999999 load imb.: force  1.6%
+
+           Step           Time         Lambda
+       19000000    38000.00000        0.00000
+
+Writing checkpoint, step 19000000 at Fri Feb 11 08:04:40 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.87234e+03    1.66002e+03    8.07609e+03    4.98386e+02    3.87059e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19769e+04   -2.73985e+03   -2.12064e+03   -2.34384e+05   -2.22597e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30033e+05    6.44494e+04   -1.65584e+05    3.51014e+02   -3.26656e+02
+  Cons. rmsd ()
+    6.41285e-06
+
+Writing checkpoint, step 19000005 at Fri Feb 11 08:04:40 2011
+
+Writing checkpoint, step 19000010 at Fri Feb 11 08:04:40 2011
+
+Writing checkpoint, step 19000015 at Fri Feb 11 08:04:40 2011
+
+Writing checkpoint, step 19000020 at Fri Feb 11 08:04:40 2011
+
+Writing checkpoint, step 19000025 at Fri Feb 11 08:04:40 2011
+
+Writing checkpoint, step 19000030 at Fri Feb 11 08:04:40 2011
+
+DD  step 19499999 load imb.: force  3.1%
+
+           Step           Time         Lambda
+       19500000    39000.00000        0.00000
+
+Writing checkpoint, step 19500000 at Fri Feb 11 09:50:18 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.56551e+03    1.63819e+03    8.17106e+03    4.41865e+02    5.06423e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17666e+04   -2.42687e+03   -2.12145e+03   -2.34205e+05   -2.22680e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29931e+05    6.39941e+04   -1.65937e+05    3.48534e+02    9.56452e+01
+  Cons. rmsd ()
+    6.00954e-06
+
+Writing checkpoint, step 19500005 at Fri Feb 11 09:50:18 2011
+
+Writing checkpoint, step 19500010 at Fri Feb 11 09:50:18 2011
+
+Writing checkpoint, step 19500015 at Fri Feb 11 09:50:18 2011
+
+Writing checkpoint, step 19500020 at Fri Feb 11 09:50:19 2011
+
+Writing checkpoint, step 19500025 at Fri Feb 11 09:50:19 2011
+
+Writing checkpoint, step 19500030 at Fri Feb 11 09:50:19 2011
+
+Writing checkpoint, step 19500035 at Fri Feb 11 09:50:19 2011
+
+DD  step 19999999 load imb.: force  2.9%
+
+           Step           Time         Lambda
+       20000000    40000.00000        0.00000
+
+Writing checkpoint, step 20000000 at Fri Feb 11 11:35:34 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.94689e+03    1.67717e+03    7.82357e+03    3.89828e+02    3.86649e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20187e+04   -2.55183e+03   -2.11268e+03   -2.34895e+05   -2.22417e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30559e+05    6.42627e+04   -1.66296e+05    3.49997e+02   -3.90245e+02
+  Cons. rmsd ()
+    6.30973e-06
+
+Writing checkpoint, step 20000005 at Fri Feb 11 11:35:34 2011
+
+Writing checkpoint, step 20000010 at Fri Feb 11 11:35:34 2011
+
+Writing checkpoint, step 20000015 at Fri Feb 11 11:35:34 2011
+
+Writing checkpoint, step 20000020 at Fri Feb 11 11:35:34 2011
+
+Writing checkpoint, step 20000025 at Fri Feb 11 11:35:34 2011
+
+Writing checkpoint, step 20000030 at Fri Feb 11 11:35:34 2011
+
+DD  step 20499999 load imb.: force  3.1%
+
+           Step           Time         Lambda
+       20500000    41000.00000        0.00000
+
+Writing checkpoint, step 20500000 at Fri Feb 11 13:21:04 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.92399e+03    1.82153e+03    8.11370e+03    4.80845e+02    4.22332e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18715e+04   -1.40846e+03   -2.12546e+03   -2.36394e+05   -2.22739e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30568e+05    6.45109e+04   -1.66057e+05    3.51349e+02   -2.34642e+02
+  Cons. rmsd ()
+    6.08315e-06
+
+Writing checkpoint, step 20500005 at Fri Feb 11 13:21:04 2011
+
+Writing checkpoint, step 20500010 at Fri Feb 11 13:21:04 2011
+
+Writing checkpoint, step 20500015 at Fri Feb 11 13:21:04 2011
+
+Writing checkpoint, step 20500020 at Fri Feb 11 13:21:04 2011
+
+Writing checkpoint, step 20500025 at Fri Feb 11 13:21:04 2011
+
+Writing checkpoint, step 20500030 at Fri Feb 11 13:21:04 2011
+
+DD  step 20999999 load imb.: force  2.3%
+
+           Step           Time         Lambda
+       21000000    42000.00391        0.00000
+
+Writing checkpoint, step 21000000 at Fri Feb 11 15:06:22 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.90461e+03    1.78910e+03    7.90827e+03    4.87524e+02    4.45744e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17492e+04   -1.88284e+03   -2.12772e+03   -2.35455e+05   -2.22603e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30441e+05    6.38244e+04   -1.66617e+05    3.47610e+02    1.19351e+02
+  Cons. rmsd ()
+    5.92266e-06
+
+Writing checkpoint, step 21000005 at Fri Feb 11 15:06:22 2011
+
+Writing checkpoint, step 21000010 at Fri Feb 11 15:06:22 2011
+
+Writing checkpoint, step 21000015 at Fri Feb 11 15:06:22 2011
+
+Writing checkpoint, step 21000020 at Fri Feb 11 15:06:22 2011
+
+Writing checkpoint, step 21000025 at Fri Feb 11 15:06:22 2011
+
+Writing checkpoint, step 21000030 at Fri Feb 11 15:06:22 2011
+
+DD  step 21499999 load imb.: force  2.0%
+
+           Step           Time         Lambda
+       21500000    43000.00391        0.00000
+
+Writing checkpoint, step 21500000 at Fri Feb 11 16:51:40 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.58966e+03    1.76773e+03    8.10654e+03    4.91464e+02    4.61404e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20605e+04   -2.27787e+03   -2.12237e+03   -2.35531e+05   -2.23618e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30816e+05    6.49565e+04   -1.65859e+05    3.53776e+02    2.90704e+01
+  Cons. rmsd ()
+    5.87863e-06
+
+Writing checkpoint, step 21500005 at Fri Feb 11 16:51:40 2011
+
+Writing checkpoint, step 21500010 at Fri Feb 11 16:51:40 2011
+
+Writing checkpoint, step 21500015 at Fri Feb 11 16:51:40 2011
+
+Writing checkpoint, step 21500020 at Fri Feb 11 16:51:40 2011
+
+Writing checkpoint, step 21500025 at Fri Feb 11 16:51:40 2011
+
+Writing checkpoint, step 21500030 at Fri Feb 11 16:51:40 2011
+
+DD  step 21999999 load imb.: force  3.4%
+
+           Step           Time         Lambda
+       22000000    44000.00391        0.00000
+
+Writing checkpoint, step 22000000 at Fri Feb 11 18:37:00 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.01910e+03    1.68855e+03    8.24000e+03    5.38525e+02    4.35347e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18616e+04   -2.61642e+03   -2.12129e+03   -2.34945e+05   -2.21938e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30093e+05    6.40848e+04   -1.66009e+05    3.49028e+02   -1.01666e+02
+  Cons. rmsd ()
+    6.85536e-06
+
+Writing checkpoint, step 22000005 at Fri Feb 11 18:37:00 2011
+
+Writing checkpoint, step 22000010 at Fri Feb 11 18:37:00 2011
+
+Writing checkpoint, step 22000015 at Fri Feb 11 18:37:00 2011
+
+Writing checkpoint, step 22000020 at Fri Feb 11 18:37:00 2011
+
+Writing checkpoint, step 22000025 at Fri Feb 11 18:37:00 2011
+
+Writing checkpoint, step 22000030 at Fri Feb 11 18:37:00 2011
+
+DD  step 22499999 load imb.: force  2.2%
+
+           Step           Time         Lambda
+       22500000    45000.00391        0.00000
+
+Writing checkpoint, step 22500000 at Fri Feb 11 20:21:50 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.79672e+03    1.74662e+03    8.16526e+03    4.47914e+02    4.36549e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17387e+04   -2.54485e+03   -2.12352e+03   -2.34514e+05   -2.22211e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30072e+05    6.42219e+04   -1.65850e+05    3.49775e+02   -1.52088e+02
+  Cons. rmsd ()
+    6.51869e-06
+
+Writing checkpoint, step 22500005 at Fri Feb 11 20:21:50 2011
+
+Writing checkpoint, step 22500010 at Fri Feb 11 20:21:50 2011
+
+Writing checkpoint, step 22500015 at Fri Feb 11 20:21:50 2011
+
+Writing checkpoint, step 22500020 at Fri Feb 11 20:21:50 2011
+
+Writing checkpoint, step 22500025 at Fri Feb 11 20:21:50 2011
+
+Writing checkpoint, step 22500030 at Fri Feb 11 20:21:50 2011
+
+DD  step 22999999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       23000000    46000.00391        0.00000
+
+Writing checkpoint, step 23000000 at Fri Feb 11 22:07:09 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.78768e+03    1.62415e+03    8.18144e+03    4.95027e+02    4.76363e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20386e+04   -1.80185e+03   -2.12695e+03   -2.35371e+05   -2.23371e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30034e+05    6.44809e+04   -1.65553e+05    3.51185e+02    5.37797e+01
+  Cons. rmsd ()
+    6.19350e-06
+
+Writing checkpoint, step 23000005 at Fri Feb 11 22:07:09 2011
+
+Writing checkpoint, step 23000010 at Fri Feb 11 22:07:09 2011
+
+Writing checkpoint, step 23000015 at Fri Feb 11 22:07:09 2011
+
+Writing checkpoint, step 23000020 at Fri Feb 11 22:07:09 2011
+
+Writing checkpoint, step 23000025 at Fri Feb 11 22:07:09 2011
+
+Writing checkpoint, step 23000030 at Fri Feb 11 22:07:09 2011
+
+DD  step 23499999 load imb.: force  1.0%
+
+           Step           Time         Lambda
+       23500000    47000.00391        0.00000
+
+Writing checkpoint, step 23500000 at Fri Feb 11 23:52:17 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.91400e+03    1.70733e+03    8.10400e+03    4.71138e+02    5.29194e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20418e+04   -2.89092e+03   -2.11466e+03   -2.33653e+05   -2.22983e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29190e+05    6.37243e+04   -1.65466e+05    3.47065e+02   -1.71703e+02
+  Cons. rmsd ()
+    5.71268e-06
+
+Writing checkpoint, step 23500005 at Fri Feb 11 23:52:17 2011
+
+Writing checkpoint, step 23500010 at Fri Feb 11 23:52:17 2011
+
+Writing checkpoint, step 23500015 at Fri Feb 11 23:52:17 2011
+
+Writing checkpoint, step 23500020 at Fri Feb 11 23:52:17 2011
+
+Writing checkpoint, step 23500025 at Fri Feb 11 23:52:17 2011
+
+Writing checkpoint, step 23500030 at Fri Feb 11 23:52:17 2011
+
+DD  step 23999999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       24000000    48000.00391        0.00000
+
+Writing checkpoint, step 24000000 at Sat Feb 12 01:37:22 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.92742e+03    1.68939e+03    8.20604e+03    4.62194e+02    4.34206e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21066e+04   -2.13869e+03   -2.12159e+03   -2.34343e+05   -2.23250e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29103e+05    6.42003e+04   -1.64902e+05    3.49657e+02   -1.52369e+02
+  Cons. rmsd ()
+    6.56772e-06
+
+Writing checkpoint, step 24000005 at Sat Feb 12 01:37:23 2011
+
+Writing checkpoint, step 24000010 at Sat Feb 12 01:37:23 2011
+
+Writing checkpoint, step 24000015 at Sat Feb 12 01:37:23 2011
+
+Writing checkpoint, step 24000020 at Sat Feb 12 01:37:23 2011
+
+Writing checkpoint, step 24000025 at Sat Feb 12 01:37:23 2011
+
+Writing checkpoint, step 24000030 at Sat Feb 12 01:37:23 2011
+
+DD  step 24499999 load imb.: force  2.1%
+
+           Step           Time         Lambda
+       24500000    49000.00391        0.00000
+
+Writing checkpoint, step 24500000 at Sat Feb 12 03:22:41 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.13797e+03    1.83624e+03    8.21062e+03    4.29025e+02    4.10981e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17363e+04   -2.45937e+03   -2.10920e+03   -2.34325e+05   -2.22147e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29348e+05    6.46692e+04   -1.64678e+05    3.52211e+02   -9.16016e+00
+  Cons. rmsd ()
+    6.38746e-06
+
+Writing checkpoint, step 24500005 at Sat Feb 12 03:22:41 2011
+
+Writing checkpoint, step 24500010 at Sat Feb 12 03:22:41 2011
+
+Writing checkpoint, step 24500015 at Sat Feb 12 03:22:41 2011
+
+Writing checkpoint, step 24500020 at Sat Feb 12 03:22:41 2011
+
+Writing checkpoint, step 24500025 at Sat Feb 12 03:22:41 2011
+
+Writing checkpoint, step 24500030 at Sat Feb 12 03:22:41 2011
+
+DD  step 24999999 load imb.: force  2.7%
+
+           Step           Time         Lambda
+       25000000    50000.00391        0.00000
+
+Writing checkpoint, step 25000000 at Sat Feb 12 05:07:32 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.58114e+03    1.64238e+03    8.12356e+03    4.91316e+02    4.59989e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20922e+04   -1.96315e+03   -2.11018e+03   -2.34900e+05   -2.22801e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29863e+05    6.41784e+04   -1.65685e+05    3.49538e+02   -2.28762e+02
+  Cons. rmsd ()
+    6.29272e-06
+
+Writing checkpoint, step 25000005 at Sat Feb 12 05:07:32 2011
+
+Writing checkpoint, step 25000010 at Sat Feb 12 05:07:32 2011
+
+Writing checkpoint, step 25000015 at Sat Feb 12 05:07:32 2011
+
+Writing checkpoint, step 25000020 at Sat Feb 12 05:07:32 2011
+
+Writing checkpoint, step 25000025 at Sat Feb 12 05:07:32 2011
+
+Writing checkpoint, step 25000030 at Sat Feb 12 05:07:32 2011
+
+DD  step 25499999 load imb.: force  1.4%
+
+           Step           Time         Lambda
+       25500000    51000.00391        0.00000
+
+Writing checkpoint, step 25500000 at Sat Feb 12 06:52:36 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.93083e+03    1.76255e+03    8.09708e+03    4.78256e+02    4.58313e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19519e+04   -2.49660e+03   -2.11627e+03   -2.34490e+05   -2.22061e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29630e+05    6.39228e+04   -1.65707e+05    3.48146e+02   -3.40733e+02
+  Cons. rmsd ()
+    6.69834e-06
+
+Writing checkpoint, step 25500005 at Sat Feb 12 06:52:36 2011
+
+Writing checkpoint, step 25500010 at Sat Feb 12 06:52:36 2011
+
+Writing checkpoint, step 25500015 at Sat Feb 12 06:52:36 2011
+
+Writing checkpoint, step 25500020 at Sat Feb 12 06:52:36 2011
+
+Writing checkpoint, step 25500025 at Sat Feb 12 06:52:36 2011
+
+Writing checkpoint, step 25500030 at Sat Feb 12 06:52:36 2011
+
+DD  step 25999999 load imb.: force  3.7%
+
+           Step           Time         Lambda
+       26000000    52000.00391        0.00000
+
+Writing checkpoint, step 26000000 at Sat Feb 12 08:37:53 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.78345e+03    1.64537e+03    8.64337e+03    4.05026e+02    4.49324e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18198e+04   -1.51074e+03   -2.12332e+03   -2.35153e+05   -2.22841e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29325e+05    6.41415e+04   -1.65183e+05    3.49337e+02    3.12863e+02
+  Cons. rmsd ()
+    6.14600e-06
+
+Writing checkpoint, step 26000005 at Sat Feb 12 08:37:53 2011
+
+Writing checkpoint, step 26000010 at Sat Feb 12 08:37:54 2011
+
+Writing checkpoint, step 26000015 at Sat Feb 12 08:37:54 2011
+
+Writing checkpoint, step 26000020 at Sat Feb 12 08:37:54 2011
+
+Writing checkpoint, step 26000025 at Sat Feb 12 08:37:54 2011
+
+Writing checkpoint, step 26000030 at Sat Feb 12 08:37:54 2011
+
+DD  step 26499999 load imb.: force  1.6%
+
+           Step           Time         Lambda
+       26500000    53000.00391        0.00000
+
+Writing checkpoint, step 26500000 at Sat Feb 12 10:23:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.67747e+03    1.75500e+03    8.10185e+03    5.03149e+02    4.74722e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17130e+04   -1.80819e+03   -2.11616e+03   -2.34529e+05   -2.22415e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29469e+05    6.48057e+04   -1.64664e+05    3.52954e+02   -1.28610e+02
+  Cons. rmsd ()
+    6.04250e-06
+
+Writing checkpoint, step 26500005 at Sat Feb 12 10:23:31 2011
+
+Writing checkpoint, step 26500010 at Sat Feb 12 10:23:31 2011
+
+Writing checkpoint, step 26500015 at Sat Feb 12 10:23:31 2011
+
+Writing checkpoint, step 26500020 at Sat Feb 12 10:23:31 2011
+
+Writing checkpoint, step 26500025 at Sat Feb 12 10:23:31 2011
+
+Writing checkpoint, step 26500030 at Sat Feb 12 10:23:31 2011
+
+DD  step 26999999 load imb.: force  3.1%
+
+           Step           Time         Lambda
+       27000000    54000.00391        0.00000
+
+Writing checkpoint, step 27000000 at Sat Feb 12 12:08:39 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.58071e+03    1.65069e+03    7.80085e+03    4.61546e+02    4.33396e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18290e+04   -2.33416e+03   -2.12660e+03   -2.34708e+05   -2.22977e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30710e+05    6.47434e+04   -1.65966e+05    3.52615e+02   -1.70841e+02
+  Cons. rmsd ()
+    6.37023e-06
+
+Writing checkpoint, step 27000005 at Sat Feb 12 12:08:39 2011
+
+Writing checkpoint, step 27000010 at Sat Feb 12 12:08:39 2011
+
+Writing checkpoint, step 27000015 at Sat Feb 12 12:08:39 2011
+
+Writing checkpoint, step 27000020 at Sat Feb 12 12:08:39 2011
+
+Writing checkpoint, step 27000025 at Sat Feb 12 12:08:39 2011
+
+Writing checkpoint, step 27000030 at Sat Feb 12 12:08:39 2011
+
+DD  step 27499999 load imb.: force  1.7%
+
+           Step           Time         Lambda
+       27500000    55000.00391        0.00000
+
+Writing checkpoint, step 27500000 at Sat Feb 12 13:53:52 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.76906e+03    1.70340e+03    7.83831e+03    5.07421e+02    4.81842e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19227e+04   -3.58556e+03   -2.12534e+03   -2.34304e+05   -2.22799e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31073e+05    6.35356e+04   -1.67537e+05    3.46037e+02   -3.83755e+02
+  Cons. rmsd ()
+    5.84408e-06
+
+Writing checkpoint, step 27500005 at Sat Feb 12 13:53:52 2011
+
+Writing checkpoint, step 27500010 at Sat Feb 12 13:53:52 2011
+
+Writing checkpoint, step 27500015 at Sat Feb 12 13:53:52 2011
+
+Writing checkpoint, step 27500020 at Sat Feb 12 13:53:52 2011
+
+Writing checkpoint, step 27500025 at Sat Feb 12 13:53:52 2011
+
+Writing checkpoint, step 27500030 at Sat Feb 12 13:53:52 2011
+
+DD  step 27999999 load imb.: force  4.0%
+
+           Step           Time         Lambda
+       28000000    56000.00391        0.00000
+
+Writing checkpoint, step 28000000 at Sat Feb 12 15:39:01 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.80600e+03    1.71797e+03    7.82825e+03    4.77635e+02    4.42597e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19117e+04   -1.53845e+03   -2.12973e+03   -2.35752e+05   -2.21744e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30410e+05    6.41938e+04   -1.66217e+05    3.49622e+02    3.16503e+02
+  Cons. rmsd ()
+    6.02672e-06
+
+Writing checkpoint, step 28000005 at Sat Feb 12 15:39:01 2011
+
+Writing checkpoint, step 28000010 at Sat Feb 12 15:39:01 2011
+
+Writing checkpoint, step 28000015 at Sat Feb 12 15:39:01 2011
+
+Writing checkpoint, step 28000020 at Sat Feb 12 15:39:01 2011
+
+Writing checkpoint, step 28000025 at Sat Feb 12 15:39:01 2011
+
+Writing checkpoint, step 28000030 at Sat Feb 12 15:39:01 2011
+
+DD  step 28499999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       28500000    57000.00391        0.00000
+
+Writing checkpoint, step 28500000 at Sat Feb 12 17:24:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.03171e+03    1.68191e+03    8.15237e+03    4.34008e+02    5.06052e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17807e+04   -2.11231e+03   -2.12888e+03   -2.35334e+05   -2.22319e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30221e+05    6.42098e+04   -1.66011e+05    3.49709e+02    3.34195e+01
+  Cons. rmsd ()
+    6.22833e-06
+
+Writing checkpoint, step 28500005 at Sat Feb 12 17:24:31 2011
+
+Writing checkpoint, step 28500010 at Sat Feb 12 17:24:31 2011
+
+Writing checkpoint, step 28500015 at Sat Feb 12 17:24:31 2011
+
+Writing checkpoint, step 28500020 at Sat Feb 12 17:24:31 2011
+
+Writing checkpoint, step 28500025 at Sat Feb 12 17:24:32 2011
+
+Writing checkpoint, step 28500030 at Sat Feb 12 17:24:32 2011
+
+DD  step 28999999 load imb.: force  3.6%
+
+           Step           Time         Lambda
+       29000000    58000.00391        0.00000
+
+Writing checkpoint, step 29000000 at Sat Feb 12 19:09:57 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.68291e+03    1.76010e+03    7.95567e+03    5.22555e+02    4.07290e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18880e+04   -2.06398e+03   -2.11954e+03   -2.34086e+05   -2.22937e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29346e+05    6.33916e+04   -1.65955e+05    3.45253e+02   -1.23454e+02
+  Cons. rmsd ()
+    5.97106e-06
+
+Writing checkpoint, step 29000005 at Sat Feb 12 19:09:58 2011
+
+Writing checkpoint, step 29000010 at Sat Feb 12 19:09:58 2011
+
+Writing checkpoint, step 29000015 at Sat Feb 12 19:09:58 2011
+
+Writing checkpoint, step 29000020 at Sat Feb 12 19:09:58 2011
+
+Writing checkpoint, step 29000025 at Sat Feb 12 19:09:58 2011
+
+Writing checkpoint, step 29000030 at Sat Feb 12 19:09:58 2011
+
+DD  step 29499999 load imb.: force  3.2%
+
+           Step           Time         Lambda
+       29500000    59000.00391        0.00000
+
+Writing checkpoint, step 29500000 at Sat Feb 12 20:55:16 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.84183e+03    1.76701e+03    8.12411e+03    4.49609e+02    3.69855e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17655e+04   -2.02232e+03   -2.12847e+03   -2.34590e+05   -2.22126e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29635e+05    6.44861e+04   -1.65149e+05    3.51213e+02   -1.25411e+02
+  Cons. rmsd ()
+    6.92385e-06
+
+Writing checkpoint, step 29500005 at Sat Feb 12 20:55:16 2011
+
+Writing checkpoint, step 29500010 at Sat Feb 12 20:55:16 2011
+
+Writing checkpoint, step 29500015 at Sat Feb 12 20:55:16 2011
+
+Writing checkpoint, step 29500020 at Sat Feb 12 20:55:16 2011
+
+Writing checkpoint, step 29500025 at Sat Feb 12 20:55:16 2011
+
+Writing checkpoint, step 29500030 at Sat Feb 12 20:55:17 2011
+
+DD  step 29999999 load imb.: force 19.7%
+
+           Step           Time         Lambda
+       30000000    60000.00391        0.00000
+
+Writing checkpoint, step 30000000 at Sat Feb 12 22:40:49 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.63347e+03    1.70781e+03    8.28647e+03    4.38885e+02    4.75928e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.22386e+04   -1.99502e+03   -2.11660e+03   -2.36370e+05   -2.22766e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30977e+05    6.39449e+04   -1.67032e+05    3.48266e+02    1.08451e+02
+  Cons. rmsd ()
+    5.96488e-06
+
+Writing checkpoint, step 30000005 at Sat Feb 12 22:40:49 2011
+
+Writing checkpoint, step 30000010 at Sat Feb 12 22:40:49 2011
+
+Writing checkpoint, step 30000015 at Sat Feb 12 22:40:49 2011
+
+Writing checkpoint, step 30000020 at Sat Feb 12 22:40:49 2011
+
+Writing checkpoint, step 30000025 at Sat Feb 12 22:40:49 2011
+
+Writing checkpoint, step 30000030 at Sat Feb 12 22:40:49 2011
+
+DD  step 30499999 load imb.: force  2.3%
+
+           Step           Time         Lambda
+       30500000    61000.00391        0.00000
+
+Writing checkpoint, step 30500000 at Sun Feb 13 00:26:09 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.90867e+03    1.74357e+03    7.97003e+03    5.02210e+02    5.50584e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18606e+04   -1.63067e+03   -2.12655e+03   -2.36833e+05   -2.22922e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31347e+05    6.52153e+04   -1.66132e+05    3.55185e+02    1.22713e+01
+  Cons. rmsd ()
+    6.39843e-06
+
+Writing checkpoint, step 30500005 at Sun Feb 13 00:26:09 2011
+
+Writing checkpoint, step 30500010 at Sun Feb 13 00:26:09 2011
+
+Writing checkpoint, step 30500015 at Sun Feb 13 00:26:09 2011
+
+Writing checkpoint, step 30500020 at Sun Feb 13 00:26:09 2011
+
+Writing checkpoint, step 30500025 at Sun Feb 13 00:26:09 2011
+
+Writing checkpoint, step 30500030 at Sun Feb 13 00:26:09 2011
+
+DD  step 30999999 load imb.: force  2.1%
+
+           Step           Time         Lambda
+       31000000    62000.00391        0.00000
+
+Writing checkpoint, step 31000000 at Sun Feb 13 02:11:26 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.83272e+03    1.65387e+03    7.91718e+03    4.57329e+02    4.29137e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20027e+04   -2.36109e+03   -2.11900e+03   -2.33922e+05   -2.22670e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29376e+05    6.44201e+04   -1.64956e+05    3.50854e+02    2.57501e+01
+  Cons. rmsd ()
+    6.24363e-06
+
+Writing checkpoint, step 31000005 at Sun Feb 13 02:11:27 2011
+
+Writing checkpoint, step 31000010 at Sun Feb 13 02:11:27 2011
+
+Writing checkpoint, step 31000015 at Sun Feb 13 02:11:27 2011
+
+Writing checkpoint, step 31000020 at Sun Feb 13 02:11:27 2011
+
+Writing checkpoint, step 31000025 at Sun Feb 13 02:11:27 2011
+
+Writing checkpoint, step 31000030 at Sun Feb 13 02:11:27 2011
+
+DD  step 31499999 load imb.: force  1.5%
+
+           Step           Time         Lambda
+       31500000    63000.00391        0.00000
+
+Writing checkpoint, step 31500000 at Sun Feb 13 03:56:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.90109e+03    1.83484e+03    7.98736e+03    4.88899e+02    3.75190e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18771e+04   -2.87636e+03   -2.11536e+03   -2.33775e+05   -2.22159e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29518e+05    6.36355e+04   -1.65883e+05    3.46581e+02   -2.25328e+02
+  Cons. rmsd ()
+    6.70313e-06
+
+Writing checkpoint, step 31500005 at Sun Feb 13 03:56:31 2011
+
+Writing checkpoint, step 31500010 at Sun Feb 13 03:56:31 2011
+
+Writing checkpoint, step 31500015 at Sun Feb 13 03:56:31 2011
+
+Writing checkpoint, step 31500020 at Sun Feb 13 03:56:31 2011
+
+Writing checkpoint, step 31500025 at Sun Feb 13 03:56:31 2011
+
+Writing checkpoint, step 31500030 at Sun Feb 13 03:56:32 2011
+
+DD  step 31999999 load imb.: force  1.5%
+
+           Step           Time         Lambda
+       32000000    64000.00391        0.00000
+
+Writing checkpoint, step 32000000 at Sun Feb 13 05:41:30 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.98868e+03    1.70206e+03    7.79778e+03    4.75796e+02    4.26346e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19294e+04   -1.66032e+03   -2.12360e+03   -2.34883e+05   -2.22017e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29548e+05    6.41835e+04   -1.65365e+05    3.49566e+02    3.27351e+01
+  Cons. rmsd ()
+    6.03216e-06
+
+Writing checkpoint, step 32000005 at Sun Feb 13 05:41:30 2011
+
+Writing checkpoint, step 32000010 at Sun Feb 13 05:41:30 2011
+
+Writing checkpoint, step 32000015 at Sun Feb 13 05:41:30 2011
+
+Writing checkpoint, step 32000020 at Sun Feb 13 05:41:30 2011
+
+Writing checkpoint, step 32000025 at Sun Feb 13 05:41:30 2011
+
+Writing checkpoint, step 32000030 at Sun Feb 13 05:41:30 2011
+
+DD  step 32499999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       32500000    65000.00391        0.00000
+
+Writing checkpoint, step 32500000 at Sun Feb 13 07:26:25 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.00421e+03    1.72202e+03    7.90192e+03    4.73126e+02    4.20908e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20544e+04   -1.52594e+03   -2.12875e+03   -2.36261e+05   -2.23012e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30640e+05    6.41930e+04   -1.66447e+05    3.49617e+02   -1.39835e+01
+  Cons. rmsd ()
+    6.18703e-06
+
+Writing checkpoint, step 32500005 at Sun Feb 13 07:26:25 2011
+
+Writing checkpoint, step 32500010 at Sun Feb 13 07:26:25 2011
+
+Writing checkpoint, step 32500015 at Sun Feb 13 07:26:25 2011
+
+Writing checkpoint, step 32500020 at Sun Feb 13 07:26:25 2011
+
+Writing checkpoint, step 32500025 at Sun Feb 13 07:26:25 2011
+
+Writing checkpoint, step 32500030 at Sun Feb 13 07:26:25 2011
+
+DD  step 32999999 load imb.: force  3.5%
+
+           Step           Time         Lambda
+       33000000    66000.00000        0.00000
+
+Writing checkpoint, step 33000000 at Sun Feb 13 09:11:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.87907e+03    1.72188e+03    8.18751e+03    5.25216e+02    4.27211e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17803e+04   -2.06892e+03   -2.12723e+03   -2.35630e+05   -2.22733e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30579e+05    6.35572e+04   -1.67021e+05    3.46154e+02   -2.44917e+02
+  Cons. rmsd ()
+    6.81929e-06
+
+Writing checkpoint, step 33000005 at Sun Feb 13 09:11:31 2011
+
+Writing checkpoint, step 33000010 at Sun Feb 13 09:11:31 2011
+
+Writing checkpoint, step 33000015 at Sun Feb 13 09:11:31 2011
+
+Writing checkpoint, step 33000020 at Sun Feb 13 09:11:31 2011
+
+Writing checkpoint, step 33000025 at Sun Feb 13 09:11:31 2011
+
+Writing checkpoint, step 33000030 at Sun Feb 13 09:11:31 2011
+
+DD  step 33499999 load imb.: force  2.2%
+
+           Step           Time         Lambda
+       33500000    67000.00000        0.00000
+
+Writing checkpoint, step 33500000 at Sun Feb 13 10:56:29 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.88735e+03    1.79941e+03    8.22308e+03    4.98993e+02    4.69857e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17988e+04   -1.68122e+03   -2.11760e+03   -2.35214e+05   -2.21921e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29528e+05    6.40808e+04   -1.65447e+05    3.49006e+02   -1.38996e+02
+  Cons. rmsd ()
+    5.94157e-06
+
+Writing checkpoint, step 33500005 at Sun Feb 13 10:56:29 2011
+
+Writing checkpoint, step 33500010 at Sun Feb 13 10:56:30 2011
+
+Writing checkpoint, step 33500015 at Sun Feb 13 10:56:30 2011
+
+Writing checkpoint, step 33500020 at Sun Feb 13 10:56:30 2011
+
+Writing checkpoint, step 33500025 at Sun Feb 13 10:56:30 2011
+
+Writing checkpoint, step 33500030 at Sun Feb 13 10:56:30 2011
+
+DD  step 33999999 load imb.: force  2.0%
+
+           Step           Time         Lambda
+       34000000    68000.00000        0.00000
+
+Writing checkpoint, step 34000000 at Sun Feb 13 12:41:29 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89934e+03    1.67625e+03    8.09952e+03    4.62855e+02    4.31986e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18095e+04   -1.97538e+03   -2.12322e+03   -2.34905e+05   -2.22435e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29868e+05    6.41915e+04   -1.65676e+05    3.49609e+02    2.01296e+01
+  Cons. rmsd ()
+    6.26682e-06
+
+Writing checkpoint, step 34000005 at Sun Feb 13 12:41:29 2011
+
+Writing checkpoint, step 34000010 at Sun Feb 13 12:41:29 2011
+
+Writing checkpoint, step 34000015 at Sun Feb 13 12:41:29 2011
+
+Writing checkpoint, step 34000020 at Sun Feb 13 12:41:29 2011
+
+Writing checkpoint, step 34000025 at Sun Feb 13 12:41:29 2011
+
+Writing checkpoint, step 34000030 at Sun Feb 13 12:41:29 2011
+
+DD  step 34499999 load imb.: force  2.7%
+
+           Step           Time         Lambda
+       34500000    69000.00000        0.00000
+
+Writing checkpoint, step 34500000 at Sun Feb 13 14:26:40 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.94870e+03    1.77257e+03    7.79500e+03    5.00099e+02    4.43075e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19362e+04   -1.81593e+03   -2.13265e+03   -2.35847e+05   -2.22776e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30677e+05    6.39635e+04   -1.66714e+05    3.48367e+02    9.70927e+01
+  Cons. rmsd ()
+    5.74726e-06
+
+Writing checkpoint, step 34500005 at Sun Feb 13 14:26:40 2011
+
+Writing checkpoint, step 34500010 at Sun Feb 13 14:26:40 2011
+
+Writing checkpoint, step 34500015 at Sun Feb 13 14:26:40 2011
+
+Writing checkpoint, step 34500020 at Sun Feb 13 14:26:40 2011
+
+Writing checkpoint, step 34500025 at Sun Feb 13 14:26:40 2011
+
+Writing checkpoint, step 34500030 at Sun Feb 13 14:26:40 2011
+
+DD  step 34999999 load imb.: force  1.4%
+
+           Step           Time         Lambda
+       35000000    70000.00000        0.00000
+
+Writing checkpoint, step 35000000 at Sun Feb 13 16:11:29 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.25868e+03    1.71935e+03    8.07144e+03    4.26083e+02    4.65032e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.22803e+04   -1.39348e+03   -2.10779e+03   -2.35574e+05   -2.22910e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29145e+05    6.42404e+04   -1.64905e+05    3.49875e+02   -6.48570e+01
+  Cons. rmsd ()
+    6.54818e-06
+
+Writing checkpoint, step 35000005 at Sun Feb 13 16:11:29 2011
+
+Writing checkpoint, step 35000010 at Sun Feb 13 16:11:29 2011
+
+Writing checkpoint, step 35000015 at Sun Feb 13 16:11:29 2011
+
+Writing checkpoint, step 35000020 at Sun Feb 13 16:11:29 2011
+
+Writing checkpoint, step 35000025 at Sun Feb 13 16:11:29 2011
+
+Writing checkpoint, step 35000030 at Sun Feb 13 16:11:29 2011
+
+DD  step 35499999 load imb.: force  2.5%
+
+           Step           Time         Lambda
+       35500000    71000.00000        0.00000
+
+Writing checkpoint, step 35500000 at Sun Feb 13 17:56:51 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.78603e+03    1.86370e+03    8.43458e+03    4.37834e+02    4.65292e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19219e+04   -2.54209e+03   -2.11211e+03   -2.34458e+05   -2.22885e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29492e+05    6.40632e+04   -1.65429e+05    3.48910e+02   -4.84104e+02
+  Cons. rmsd ()
+    6.29051e-06
+
+Writing checkpoint, step 35500005 at Sun Feb 13 17:56:51 2011
+
+Writing checkpoint, step 35500010 at Sun Feb 13 17:56:51 2011
+
+Writing checkpoint, step 35500015 at Sun Feb 13 17:56:52 2011
+
+Writing checkpoint, step 35500020 at Sun Feb 13 17:56:52 2011
+
+Writing checkpoint, step 35500025 at Sun Feb 13 17:56:52 2011
+
+Writing checkpoint, step 35500030 at Sun Feb 13 17:56:52 2011
+
+DD  step 35999999 load imb.: force  2.7%
+
+           Step           Time         Lambda
+       36000000    72000.00000        0.00000
+
+Writing checkpoint, step 36000000 at Sun Feb 13 19:42:00 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.71429e+03    1.62984e+03    8.00693e+03    4.58951e+02    4.35295e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18917e+04   -1.66341e+03   -2.11612e+03   -2.34667e+05   -2.22432e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29553e+05    6.40323e+04   -1.65520e+05    3.48742e+02    4.56525e+01
+  Cons. rmsd ()
+    6.18460e-06
+
+Writing checkpoint, step 36000005 at Sun Feb 13 19:42:00 2011
+
+Writing checkpoint, step 36000010 at Sun Feb 13 19:42:00 2011
+
+Writing checkpoint, step 36000015 at Sun Feb 13 19:42:00 2011
+
+Writing checkpoint, step 36000020 at Sun Feb 13 19:42:00 2011
+
+Writing checkpoint, step 36000025 at Sun Feb 13 19:42:00 2011
+
+Writing checkpoint, step 36000030 at Sun Feb 13 19:42:00 2011
+
+DD  step 36499999 load imb.: force  3.1%
+
+           Step           Time         Lambda
+       36500000    73000.00000        0.00000
+
+Writing checkpoint, step 36500000 at Sun Feb 13 21:27:16 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.91402e+03    1.79286e+03    7.97997e+03    4.73643e+02    4.53533e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18101e+04   -2.12592e+03   -2.12147e+03   -2.34880e+05   -2.22419e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29945e+05    6.47468e+04   -1.65199e+05    3.52633e+02    1.48372e+02
+  Cons. rmsd ()
+    6.59425e-06
+
+Writing checkpoint, step 36500005 at Sun Feb 13 21:27:16 2011
+
+Writing checkpoint, step 36500010 at Sun Feb 13 21:27:16 2011
+
+Writing checkpoint, step 36500015 at Sun Feb 13 21:27:17 2011
+
+Writing checkpoint, step 36500020 at Sun Feb 13 21:27:17 2011
+
+Writing checkpoint, step 36500025 at Sun Feb 13 21:27:17 2011
+
+Writing checkpoint, step 36500030 at Sun Feb 13 21:27:17 2011
+
+DD  step 36999999 load imb.: force  1.5%
+
+           Step           Time         Lambda
+       37000000    74000.00000        0.00000
+
+Writing checkpoint, step 37000000 at Sun Feb 13 23:12:29 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89755e+03    1.75745e+03    8.08787e+03    4.10270e+02    4.98385e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20351e+04   -2.31961e+03   -2.11936e+03   -2.33554e+05   -2.22764e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.28583e+05    6.35296e+04   -1.65053e+05    3.46004e+02    1.79472e+02
+  Cons. rmsd ()
+    5.63004e-06
+
+Writing checkpoint, step 37000005 at Sun Feb 13 23:12:29 2011
+
+Writing checkpoint, step 37000010 at Sun Feb 13 23:12:29 2011
+
+Writing checkpoint, step 37000015 at Sun Feb 13 23:12:29 2011
+
+Writing checkpoint, step 37000020 at Sun Feb 13 23:12:29 2011
+
+Writing checkpoint, step 37000025 at Sun Feb 13 23:12:29 2011
+
+Writing checkpoint, step 37000030 at Sun Feb 13 23:12:29 2011
+
+DD  step 37499999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       37500000    75000.00000        0.00000
+
+Writing checkpoint, step 37500000 at Mon Feb 14 00:57:23 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.78993e+03    1.64680e+03    8.25453e+03    4.67840e+02    4.12377e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20337e+04   -1.76586e+03   -2.11514e+03   -2.35130e+05   -2.23329e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29739e+05    6.44424e+04   -1.65296e+05    3.50976e+02   -3.36978e+02
+  Cons. rmsd ()
+    6.44789e-06
+
+Writing checkpoint, step 37500005 at Mon Feb 14 00:57:23 2011
+
+Writing checkpoint, step 37500010 at Mon Feb 14 00:57:23 2011
+
+Writing checkpoint, step 37500015 at Mon Feb 14 00:57:23 2011
+
+Writing checkpoint, step 37500020 at Mon Feb 14 00:57:24 2011
+
+Writing checkpoint, step 37500025 at Mon Feb 14 00:57:24 2011
+
+Writing checkpoint, step 37500030 at Mon Feb 14 00:57:24 2011
+
+DD  step 37999999 load imb.: force  1.9%
+
+           Step           Time         Lambda
+       38000000    76000.00000        0.00000
+
+Writing checkpoint, step 38000000 at Mon Feb 14 02:42:35 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.77057e+03    1.68792e+03    8.21811e+03    4.49054e+02    4.34656e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21486e+04   -1.38994e+03   -2.12542e+03   -2.35960e+05   -2.23835e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30150e+05    6.50199e+04   -1.65130e+05    3.54121e+02    7.89749e+01
+  Cons. rmsd ()
+    6.01755e-06
+
+Writing checkpoint, step 38000005 at Mon Feb 14 02:42:35 2011
+
+Writing checkpoint, step 38000010 at Mon Feb 14 02:42:35 2011
+
+Writing checkpoint, step 38000015 at Mon Feb 14 02:42:35 2011
+
+Writing checkpoint, step 38000020 at Mon Feb 14 02:42:35 2011
+
+Writing checkpoint, step 38000025 at Mon Feb 14 02:42:36 2011
+
+Writing checkpoint, step 38000030 at Mon Feb 14 02:42:36 2011
+
+DD  step 38499999 load imb.: force  4.0%
+
+           Step           Time         Lambda
+       38500000    77000.00000        0.00000
+
+Writing checkpoint, step 38500000 at Mon Feb 14 04:27:42 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.93425e+03    1.70242e+03    8.15814e+03    5.14432e+02    3.79910e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19769e+04   -1.69194e+03   -2.11824e+03   -2.35866e+05   -2.22042e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30214e+05    6.43708e+04   -1.65843e+05    3.50585e+02   -1.97261e+02
+  Cons. rmsd ()
+    6.42989e-06
+
+Writing checkpoint, step 38500005 at Mon Feb 14 04:27:42 2011
+
+Writing checkpoint, step 38500010 at Mon Feb 14 04:27:42 2011
+
+Writing checkpoint, step 38500015 at Mon Feb 14 04:27:42 2011
+
+Writing checkpoint, step 38500020 at Mon Feb 14 04:27:42 2011
+
+Writing checkpoint, step 38500025 at Mon Feb 14 04:27:42 2011
+
+Writing checkpoint, step 38500030 at Mon Feb 14 04:27:43 2011
+
+DD  step 38999999 load imb.: force  1.8%
+
+           Step           Time         Lambda
+       39000000    78000.00000        0.00000
+
+Writing checkpoint, step 39000000 at Mon Feb 14 06:12:30 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.78630e+03    1.68856e+03    7.91601e+03    4.73145e+02    3.99666e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18281e+04   -2.40070e+03   -2.11997e+03   -2.34580e+05   -2.22817e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30291e+05    6.47205e+04   -1.65570e+05    3.52490e+02    8.81805e-02
+  Cons. rmsd ()
+    6.30761e-06
+
+Writing checkpoint, step 39000005 at Mon Feb 14 06:12:30 2011
+
+Writing checkpoint, step 39000010 at Mon Feb 14 06:12:30 2011
+
+Writing checkpoint, step 39000015 at Mon Feb 14 06:12:30 2011
+
+Writing checkpoint, step 39000020 at Mon Feb 14 06:12:30 2011
+
+Writing checkpoint, step 39000025 at Mon Feb 14 06:12:30 2011
+
+Writing checkpoint, step 39000030 at Mon Feb 14 06:12:30 2011
+
+DD  step 39499999 load imb.: force  2.8%
+
+           Step           Time         Lambda
+       39500000    79000.00000        0.00000
+
+Writing checkpoint, step 39500000 at Mon Feb 14 07:57:22 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.10853e+03    1.75357e+03    7.90921e+03    4.35687e+02    4.20032e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18927e+04   -1.41335e+03   -2.12128e+03   -2.35578e+05   -2.22899e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29882e+05    6.40800e+04   -1.65802e+05    3.49002e+02   -3.70700e+01
+  Cons. rmsd ()
+    5.81891e-06
+
+Writing checkpoint, step 39500005 at Mon Feb 14 07:57:22 2011
+
+Writing checkpoint, step 39500010 at Mon Feb 14 07:57:22 2011
+
+Writing checkpoint, step 39500015 at Mon Feb 14 07:57:22 2011
+
+Writing checkpoint, step 39500020 at Mon Feb 14 07:57:22 2011
+
+Writing checkpoint, step 39500025 at Mon Feb 14 07:57:22 2011
+
+Writing checkpoint, step 39500030 at Mon Feb 14 07:57:22 2011
+
+DD  step 39999999 load imb.: force  1.3%
+
+           Step           Time         Lambda
+       40000000    80000.00000        0.00000
+
+Writing checkpoint, step 40000000 at Mon Feb 14 09:42:26 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.78696e+03    1.77399e+03    8.09751e+03    4.33908e+02    4.76496e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18240e+04   -2.01038e+03   -2.12595e+03   -2.35053e+05   -2.22978e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30094e+05    6.47606e+04   -1.65334e+05    3.52709e+02    2.15381e+02
+  Cons. rmsd ()
+    5.98033e-06
+
+Writing checkpoint, step 40000005 at Mon Feb 14 09:42:26 2011
+
+Writing checkpoint, step 40000010 at Mon Feb 14 09:42:26 2011
+
+Writing checkpoint, step 40000015 at Mon Feb 14 09:42:26 2011
+
+Writing checkpoint, step 40000020 at Mon Feb 14 09:42:26 2011
+
+Writing checkpoint, step 40000025 at Mon Feb 14 09:42:26 2011
+
+Writing checkpoint, step 40000030 at Mon Feb 14 09:42:26 2011
+
+DD  step 40499999 load imb.: force  2.2%
+
+           Step           Time         Lambda
+       40500000    81000.00000        0.00000
+
+Writing checkpoint, step 40500000 at Mon Feb 14 11:27:32 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.71404e+03    1.68735e+03    8.23307e+03    4.88891e+02    4.30886e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19848e+04   -1.72403e+03   -2.12037e+03   -2.36197e+05   -2.22822e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30785e+05    6.43396e+04   -1.66445e+05    3.50416e+02   -2.50341e+02
+  Cons. rmsd ()
+    6.20892e-06
+
+Writing checkpoint, step 40500005 at Mon Feb 14 11:27:32 2011
+
+Writing checkpoint, step 40500010 at Mon Feb 14 11:27:32 2011
+
+Writing checkpoint, step 40500015 at Mon Feb 14 11:27:32 2011
+
+Writing checkpoint, step 40500020 at Mon Feb 14 11:27:32 2011
+
+Writing checkpoint, step 40500025 at Mon Feb 14 11:27:32 2011
+
+Writing checkpoint, step 40500030 at Mon Feb 14 11:27:32 2011
+
+DD  step 40999999 load imb.: force  3.1%
+
+           Step           Time         Lambda
+       41000000    82000.00000        0.00000
+
+Writing checkpoint, step 41000000 at Mon Feb 14 13:12:40 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.67618e+03    1.60391e+03    7.96863e+03    5.16217e+02    4.39591e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19558e+04   -2.20138e+03   -2.11161e+03   -2.35129e+05   -2.23093e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30591e+05    6.40718e+04   -1.66519e+05    3.48957e+02   -3.29531e+02
+  Cons. rmsd ()
+    6.92037e-06
+
+Writing checkpoint, step 41000005 at Mon Feb 14 13:12:40 2011
+
+Writing checkpoint, step 41000010 at Mon Feb 14 13:12:40 2011
+
+Writing checkpoint, step 41000015 at Mon Feb 14 13:12:40 2011
+
+Writing checkpoint, step 41000020 at Mon Feb 14 13:12:40 2011
+
+Writing checkpoint, step 41000025 at Mon Feb 14 13:12:40 2011
+
+Writing checkpoint, step 41000030 at Mon Feb 14 13:12:41 2011
+
+DD  step 41499999 load imb.: force  2.8%
+
+           Step           Time         Lambda
+       41500000    83000.00781        0.00000
+
+Writing checkpoint, step 41500000 at Mon Feb 14 14:57:30 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.91368e+03    1.69592e+03    7.87465e+03    5.11761e+02    4.16327e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20169e+04   -2.53575e+03   -2.12072e+03   -2.34235e+05   -2.23190e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29781e+05    6.41293e+04   -1.65652e+05    3.49270e+02   -4.55536e+01
+  Cons. rmsd ()
+    6.37577e-06
+
+Writing checkpoint, step 41500005 at Mon Feb 14 14:57:30 2011
+
+Writing checkpoint, step 41500010 at Mon Feb 14 14:57:30 2011
+
+Writing checkpoint, step 41500015 at Mon Feb 14 14:57:30 2011
+
+Writing checkpoint, step 41500020 at Mon Feb 14 14:57:30 2011
+
+Writing checkpoint, step 41500025 at Mon Feb 14 14:57:30 2011
+
+Writing checkpoint, step 41500030 at Mon Feb 14 14:57:31 2011
+
+DD  step 41999999 load imb.: force  0.9%
+
+           Step           Time         Lambda
+       42000000    84000.00781        0.00000
+
+Writing checkpoint, step 42000000 at Mon Feb 14 16:42:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.81225e+03    1.65566e+03    8.28148e+03    4.62922e+02    5.23242e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.22352e+04   -2.34624e+03   -2.11438e+03   -2.34242e+05   -2.23131e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29044e+05    6.48936e+04   -1.64151e+05    3.53433e+02    5.97958e+00
+  Cons. rmsd ()
+    6.29302e-06
+
+Writing checkpoint, step 42000005 at Mon Feb 14 16:42:31 2011
+
+Writing checkpoint, step 42000010 at Mon Feb 14 16:42:32 2011
+
+Writing checkpoint, step 42000015 at Mon Feb 14 16:42:32 2011
+
+Writing checkpoint, step 42000020 at Mon Feb 14 16:42:32 2011
+
+Writing checkpoint, step 42000025 at Mon Feb 14 16:42:32 2011
+
+Writing checkpoint, step 42000030 at Mon Feb 14 16:42:32 2011
+
+DD  step 42499999 load imb.: force  3.0%
+
+           Step           Time         Lambda
+       42500000    85000.00781        0.00000
+
+Writing checkpoint, step 42500000 at Mon Feb 14 18:27:57 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.83288e+03    1.69667e+03    7.97090e+03    4.52310e+02    4.26037e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20218e+04   -1.88769e+03   -2.12823e+03   -2.36048e+05   -2.22996e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30963e+05    6.44203e+04   -1.66543e+05    3.50855e+02    5.53484e+01
+  Cons. rmsd ()
+    6.00001e-06
+
+Writing checkpoint, step 42500005 at Mon Feb 14 18:27:57 2011
+
+Writing checkpoint, step 42500010 at Mon Feb 14 18:27:58 2011
+
+Writing checkpoint, step 42500015 at Mon Feb 14 18:27:58 2011
+
+Writing checkpoint, step 42500020 at Mon Feb 14 18:27:58 2011
+
+Writing checkpoint, step 42500025 at Mon Feb 14 18:27:58 2011
+
+Writing checkpoint, step 42500030 at Mon Feb 14 18:27:58 2011
+
+DD  step 42999999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       43000000    86000.00781        0.00000
+
+Writing checkpoint, step 43000000 at Mon Feb 14 20:12:39 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.76382e+03    1.77998e+03    8.14580e+03    4.93137e+02    4.21346e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18932e+04   -1.60656e+03   -2.10890e+03   -2.35842e+05   -2.22774e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30337e+05    6.48737e+04   -1.65463e+05    3.53325e+02   -1.85696e+02
+  Cons. rmsd ()
+    6.19183e-06
+
+Writing checkpoint, step 43000005 at Mon Feb 14 20:12:39 2011
+
+Writing checkpoint, step 43000010 at Mon Feb 14 20:12:39 2011
+
+Writing checkpoint, step 43000015 at Mon Feb 14 20:12:39 2011
+
+Writing checkpoint, step 43000020 at Mon Feb 14 20:12:39 2011
+
+Writing checkpoint, step 43000025 at Mon Feb 14 20:12:39 2011
+
+Writing checkpoint, step 43000030 at Mon Feb 14 20:12:39 2011
+
+DD  step 43499999 load imb.: force  1.7%
+
+           Step           Time         Lambda
+       43500000    87000.00781        0.00000
+
+Writing checkpoint, step 43500000 at Mon Feb 14 21:58:00 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.95169e+03    1.70232e+03    7.87405e+03    4.73994e+02    4.21004e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18092e+04   -2.34053e+03   -2.12508e+03   -2.34626e+05   -2.22386e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30098e+05    6.39765e+04   -1.66121e+05    3.48438e+02   -1.76217e+02
+  Cons. rmsd ()
+    6.51287e-06
+
+Writing checkpoint, step 43500005 at Mon Feb 14 21:58:00 2011
+
+Writing checkpoint, step 43500010 at Mon Feb 14 21:58:00 2011
+
+Writing checkpoint, step 43500015 at Mon Feb 14 21:58:00 2011
+
+Writing checkpoint, step 43500020 at Mon Feb 14 21:58:00 2011
+
+Writing checkpoint, step 43500025 at Mon Feb 14 21:58:00 2011
+
+Writing checkpoint, step 43500030 at Mon Feb 14 21:58:00 2011
+
+DD  step 43999999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       44000000    88000.00781        0.00000
+
+Writing checkpoint, step 44000000 at Mon Feb 14 23:43:23 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.83170e+03    1.65657e+03    7.78463e+03    4.86053e+02    4.57662e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21215e+04   -2.67090e+03   -2.13477e+03   -2.35437e+05   -2.23145e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31219e+05    6.42633e+04   -1.66955e+05    3.50000e+02   -6.90370e+01
+  Cons. rmsd ()
+    5.82414e-06
+
+Writing checkpoint, step 44000005 at Mon Feb 14 23:43:23 2011
+
+Writing checkpoint, step 44000010 at Mon Feb 14 23:43:23 2011
+
+Writing checkpoint, step 44000015 at Mon Feb 14 23:43:23 2011
+
+Writing checkpoint, step 44000020 at Mon Feb 14 23:43:24 2011
+
+Writing checkpoint, step 44000025 at Mon Feb 14 23:43:24 2011
+
+Writing checkpoint, step 44000030 at Mon Feb 14 23:43:24 2011
+
+DD  step 44499999 load imb.: force  2.1%
+
+           Step           Time         Lambda
+       44500000    89000.00781        0.00000
+
+Writing checkpoint, step 44500000 at Tue Feb 15 01:28:43 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.89511e+03    1.61951e+03    8.01563e+03    4.74532e+02    4.73011e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17485e+04   -2.43628e+03   -2.12603e+03   -2.34742e+05   -2.22479e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30326e+05    6.38460e+04   -1.66480e+05    3.47727e+02    1.72651e+01
+  Cons. rmsd ()
+    6.07626e-06
+
+Writing checkpoint, step 44500005 at Tue Feb 15 01:28:43 2011
+
+Writing checkpoint, step 44500010 at Tue Feb 15 01:28:43 2011
+
+Writing checkpoint, step 44500015 at Tue Feb 15 01:28:43 2011
+
+Writing checkpoint, step 44500020 at Tue Feb 15 01:28:43 2011
+
+Writing checkpoint, step 44500025 at Tue Feb 15 01:28:43 2011
+
+Writing checkpoint, step 44500030 at Tue Feb 15 01:28:43 2011
+
+DD  step 44999999 load imb.: force  0.9%
+
+           Step           Time         Lambda
+       45000000    90000.00781        0.00000
+
+Writing checkpoint, step 45000000 at Tue Feb 15 03:13:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.76822e+03    1.60566e+03    7.80726e+03    4.87477e+02    4.50530e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19035e+04   -1.64965e+03   -2.12245e+03   -2.35035e+05   -2.23031e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30088e+05    6.43011e+04   -1.65787e+05    3.50206e+02    8.11049e+01
+  Cons. rmsd ()
+    5.57794e-06
+
+Writing checkpoint, step 45000005 at Tue Feb 15 03:13:31 2011
+
+Writing checkpoint, step 45000010 at Tue Feb 15 03:13:31 2011
+
+Writing checkpoint, step 45000015 at Tue Feb 15 03:13:32 2011
+
+Writing checkpoint, step 45000020 at Tue Feb 15 03:13:32 2011
+
+Writing checkpoint, step 45000025 at Tue Feb 15 03:13:32 2011
+
+Writing checkpoint, step 45000030 at Tue Feb 15 03:13:32 2011
+
+DD  step 45499999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       45500000    91000.00781        0.00000
+
+Writing checkpoint, step 45500000 at Tue Feb 15 04:58:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.01709e+03    1.70698e+03    8.16884e+03    4.92230e+02    4.26717e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.21181e+04   -6.96381e+02   -2.12869e+03   -2.37845e+05   -2.23110e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31051e+05    6.47482e+04   -1.66303e+05    3.52641e+02    1.67521e+02
+  Cons. rmsd ()
+    6.22102e-06
+
+Writing checkpoint, step 45500005 at Tue Feb 15 04:58:31 2011
+
+Writing checkpoint, step 45500010 at Tue Feb 15 04:58:31 2011
+
+Writing checkpoint, step 45500015 at Tue Feb 15 04:58:31 2011
+
+Writing checkpoint, step 45500020 at Tue Feb 15 04:58:31 2011
+
+Writing checkpoint, step 45500025 at Tue Feb 15 04:58:31 2011
+
+Writing checkpoint, step 45500030 at Tue Feb 15 04:58:32 2011
+
+DD  step 45999999 load imb.: force  2.9%
+
+           Step           Time         Lambda
+       46000000    92000.00781        0.00000
+
+Writing checkpoint, step 46000000 at Tue Feb 15 06:43:31 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.63832e+03    1.83672e+03    8.05245e+03    4.80007e+02    4.03491e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.20759e+04   -3.20465e+03   -2.12607e+03   -2.34142e+05   -2.23141e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30300e+05    6.37248e+04   -1.66575e+05    3.47068e+02   -2.76245e+02
+  Cons. rmsd ()
+    5.64814e-06
+
+Writing checkpoint, step 46000005 at Tue Feb 15 06:43:31 2011
+
+Writing checkpoint, step 46000010 at Tue Feb 15 06:43:31 2011
+
+Writing checkpoint, step 46000015 at Tue Feb 15 06:43:31 2011
+
+Writing checkpoint, step 46000020 at Tue Feb 15 06:43:31 2011
+
+Writing checkpoint, step 46000025 at Tue Feb 15 06:43:31 2011
+
+Writing checkpoint, step 46000030 at Tue Feb 15 06:43:31 2011
+
+DD  step 46499999 load imb.: force  1.4%
+
+           Step           Time         Lambda
+       46500000    93000.00781        0.00000
+
+Writing checkpoint, step 46500000 at Tue Feb 15 08:28:25 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.88023e+03    1.66793e+03    7.98394e+03    5.11188e+02    3.60122e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.22366e+04   -2.31689e+03   -2.12681e+03   -2.35964e+05   -2.23655e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31133e+05    6.44031e+04   -1.66730e+05    3.50762e+02   -2.21321e+02
+  Cons. rmsd ()
+    6.11628e-06
+
+Writing checkpoint, step 46500005 at Tue Feb 15 08:28:25 2011
+
+Writing checkpoint, step 46500010 at Tue Feb 15 08:28:25 2011
+
+Writing checkpoint, step 46500015 at Tue Feb 15 08:28:25 2011
+
+Writing checkpoint, step 46500020 at Tue Feb 15 08:28:25 2011
+
+Writing checkpoint, step 46500025 at Tue Feb 15 08:28:25 2011
+
+Writing checkpoint, step 46500030 at Tue Feb 15 08:28:25 2011
+
+DD  step 46999999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       47000000    94000.00781        0.00000
+
+Writing checkpoint, step 47000000 at Tue Feb 15 10:13:19 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.90396e+03    1.65558e+03    7.95018e+03    4.76445e+02    5.05242e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.18555e+04   -2.37193e+03   -2.12032e+03   -2.34681e+05   -2.22805e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30107e+05    6.41732e+04   -1.65934e+05    3.49509e+02    6.28462e+01
+  Cons. rmsd ()
+    5.76779e-06
+
+Writing checkpoint, step 47000005 at Tue Feb 15 10:13:19 2011
+
+Writing checkpoint, step 47000010 at Tue Feb 15 10:13:19 2011
+
+Writing checkpoint, step 47000015 at Tue Feb 15 10:13:19 2011
+
+Writing checkpoint, step 47000020 at Tue Feb 15 10:13:19 2011
+
+Writing checkpoint, step 47000025 at Tue Feb 15 10:13:19 2011
+
+Writing checkpoint, step 47000030 at Tue Feb 15 10:13:19 2011
+
+DD  step 47499999 load imb.: force  1.4%
+
+           Step           Time         Lambda
+       47500000    95000.00781        0.00000
+
+Writing checkpoint, step 47500000 at Tue Feb 15 11:58:32 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.83844e+03    1.71442e+03    8.13634e+03    4.33561e+02    4.39238e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19575e+04   -1.11421e+03   -2.12005e+03   -2.36587e+05   -2.22872e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30589e+05    6.38533e+04   -1.66735e+05    3.47767e+02    6.07133e+01
+  Cons. rmsd ()
+    6.24614e-06
+
+Writing checkpoint, step 47500005 at Tue Feb 15 11:58:32 2011
+
+Writing checkpoint, step 47500010 at Tue Feb 15 11:58:32 2011
+
+Writing checkpoint, step 47500015 at Tue Feb 15 11:58:32 2011
+
+Writing checkpoint, step 47500020 at Tue Feb 15 11:58:32 2011
+
+Writing checkpoint, step 47500025 at Tue Feb 15 11:58:32 2011
+
+Writing checkpoint, step 47500030 at Tue Feb 15 11:58:32 2011
+
+DD  step 47999999 load imb.: force  2.6%
+
+           Step           Time         Lambda
+       48000000    96000.00781        0.00000
+
+Writing checkpoint, step 48000000 at Tue Feb 15 13:43:16 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.87807e+03    1.68745e+03    7.69068e+03    4.73332e+02    4.11740e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.16540e+04   -2.09806e+03   -2.12115e+03   -2.35494e+05   -2.21780e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.31096e+05    6.42502e+04   -1.66845e+05    3.49929e+02    7.30901e+01
+  Cons. rmsd ()
+    5.99915e-06
+
+Writing checkpoint, step 48000005 at Tue Feb 15 13:43:16 2011
+
+Writing checkpoint, step 48000010 at Tue Feb 15 13:43:16 2011
+
+Writing checkpoint, step 48000015 at Tue Feb 15 13:43:16 2011
+
+Writing checkpoint, step 48000020 at Tue Feb 15 13:43:16 2011
+
+Writing checkpoint, step 48000025 at Tue Feb 15 13:43:16 2011
+
+Writing checkpoint, step 48000030 at Tue Feb 15 13:43:16 2011
+
+DD  step 48499999 load imb.: force  2.5%
+
+           Step           Time         Lambda
+       48500000    97000.00781        0.00000
+
+Writing checkpoint, step 48500000 at Tue Feb 15 15:28:20 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.79327e+03    1.67064e+03    8.08474e+03    4.26710e+02    4.29040e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.17301e+04   -1.73768e+03   -2.11807e+03   -2.35979e+05   -2.21994e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30900e+05    6.49443e+04   -1.65956e+05    3.53709e+02    4.74749e+01
+  Cons. rmsd ()
+    5.92152e-06
+
+Writing checkpoint, step 48500005 at Tue Feb 15 15:28:20 2011
+
+Writing checkpoint, step 48500010 at Tue Feb 15 15:28:20 2011
+
+Writing checkpoint, step 48500015 at Tue Feb 15 15:28:20 2011
+
+Writing checkpoint, step 48500020 at Tue Feb 15 15:28:20 2011
+
+Writing checkpoint, step 48500025 at Tue Feb 15 15:28:20 2011
+
+Writing checkpoint, step 48500030 at Tue Feb 15 15:28:20 2011
+
+DD  step 48999999 load imb.: force  2.3%
+
+           Step           Time         Lambda
+       49000000    98000.00781        0.00000
+
+Writing checkpoint, step 49000000 at Tue Feb 15 17:13:25 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.00791e+03    1.71208e+03    7.80846e+03    5.05611e+02    3.72753e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.16896e+04   -1.80059e+03   -2.11716e+03   -2.35048e+05   -2.21426e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30011e+05    6.41447e+04   -1.65867e+05    3.49354e+02   -1.55799e+02
+  Cons. rmsd ()
+    6.50093e-06
+
+Writing checkpoint, step 49000005 at Tue Feb 15 17:13:25 2011
+
+Writing checkpoint, step 49000010 at Tue Feb 15 17:13:25 2011
+
+Writing checkpoint, step 49000015 at Tue Feb 15 17:13:25 2011
+
+Writing checkpoint, step 49000020 at Tue Feb 15 17:13:25 2011
+
+Writing checkpoint, step 49000025 at Tue Feb 15 17:13:25 2011
+
+Writing checkpoint, step 49000030 at Tue Feb 15 17:13:25 2011
+
+DD  step 49499999 load imb.: force  1.2%
+
+           Step           Time         Lambda
+       49500000    99000.00781        0.00000
+
+Writing checkpoint, step 49500000 at Tue Feb 15 18:58:26 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.00300e+03    1.73862e+03    8.00802e+03    4.67996e+02    4.55109e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.15566e+04   -2.52770e+03   -2.11648e+03   -2.32637e+05   -2.21612e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.28214e+05    6.46114e+04   -1.63602e+05    3.51896e+02   -3.96003e+01
+  Cons. rmsd ()
+    6.29408e-06
+
+Writing checkpoint, step 49500005 at Tue Feb 15 18:58:26 2011
+
+Writing checkpoint, step 49500010 at Tue Feb 15 18:58:26 2011
+
+Writing checkpoint, step 49500015 at Tue Feb 15 18:58:27 2011
+
+Writing checkpoint, step 49500020 at Tue Feb 15 18:58:27 2011
+
+Writing checkpoint, step 49500025 at Tue Feb 15 18:58:27 2011
+
+Writing checkpoint, step 49500030 at Tue Feb 15 18:58:27 2011
+
+DD  step 49999999 load imb.: force  2.4%
+
+           Step           Time         Lambda
+       50000000   100000.00781        0.00000
+
+Writing checkpoint, step 50000000 at Tue Feb 15 20:43:32 2011
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    9.13579e+03    1.66845e+03    8.04980e+03    4.97766e+02    4.78719e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.16718e+04   -1.71776e+03   -2.12479e+03   -2.34618e+05   -2.21785e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.29137e+05    6.41301e+04   -1.65007e+05    3.49275e+02    6.71794e+01
+  Cons. rmsd ()
+    6.12405e-06
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    8.85209e+03    1.71015e+03    8.04423e+03    4.73194e+02    4.40190e+02
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.19248e+04   -1.83551e+03   -2.12141e+03   -2.35432e+05   -2.22600e+04
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+   -2.30205e+05    6.42633e+04   -1.65941e+05    3.50000e+02    9.49208e-01
+  Cons. rmsd ()
+    0.00000e+00
+
+          Box-X          Box-Y          Box-Z         Volume   Density (SI)
+    5.45783e+00    4.71560e+00    1.20967e+01    3.11311e+02    9.48387e+02
+             pV
+    1.48815e+01
+
+   Total Virial (kJ/mol)
+    2.20954e+04    2.51797e+01    8.87336e+01
+    2.51588e+01    2.19957e+04    3.21574e+01
+    8.87281e+01    3.22061e+01    2.01498e+04
+
+   Pressure (bar)
+    1.00386e+00   -2.19221e+00   -3.45831e-02
+   -2.18998e+00    1.00114e+00   -1.55836e-01
+   -3.39717e-02   -1.61019e-01    8.42627e-01
+
+   Total Dipole (Debye)
+   -5.52994e+01   -3.81854e+02   -6.73257e+00
+
+         T-CER2          T-SOL
+    3.50000e+02    3.50000e+02
+
+	<======  ###############################  ==>
+	<====  R M S - F L U C T U A T I O N S  ====>
+	<==  ###############################  ======>
+
+   Energies (kJ/mol)
+          Angle    Proper Dih. Ryckaert-Bell.  Improper Dih.          LJ-14
+    1.58787e+02    6.27004e+01    1.78350e+02    3.03800e+01    4.31455e+01
+     Coulomb-14        LJ (SR)  Disper. corr.   Coulomb (SR)   Coul. recip.
+    1.42351e+02    5.45698e+02    6.58599e+00    8.70740e+02    5.70494e+01
+      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
+    6.53452e+02    4.29373e+02    7.82894e+02    2.33851e+00    1.74584e+02
+  Cons. rmsd ()
+    0.00000e+00
+
+          Box-X          Box-Y          Box-Z         Volume   Density (SI)
+    3.21108e-02    3.24628e-02    9.47088e-02    9.66552e-01    2.94430e+00
+             pV
+    3.27292e+03
+
+   Total Virial (kJ/mol)
+    1.77398e+03    1.08443e+03    1.14112e+03
+    1.08430e+03    1.72208e+03    1.16226e+03
+    1.14481e+03    1.16599e+03    3.46165e+03
+
+   Pressure (bar)
+    1.90580e+02    1.17194e+02    1.23422e+02
+    1.17180e+02    1.85027e+02    1.25709e+02
+    1.23810e+02    1.26102e+02    3.69986e+02
+
+   Total Dipole (Debye)
+    1.81965e+02    1.82119e+02    4.37777e+01
+
+         T-CER2          T-SOL
+    4.37124e+00    2.76712e+00
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+   RF=Reaction-Field  FE=Free Energy  SCFE=Soft-Core/Free Energy
+   T=Tabulated        W3=SPC/TIP3p    W4=TIP4p (single or pairs)
+   NF=No Forces
+
+ Computing:                         M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------
+ LJ                          38870705.401177  1282733278.239     7.9
+ Coul(T)                      7877328.928993   330847815.018     2.0
+ Coul(T) [W3]                  780618.730616    97577341.327     0.6
+ Coul(T) + LJ                 3428789.428680   188583418.577     1.2
+ Coul(T) + LJ [W3]            1787426.394537   246664842.446     1.5
+ Coul(T) + LJ [W3-W3]        27621593.989827 10551448904.114    65.1
+ Outer nonbonded loop         5058127.670377    50581276.704     0.3
+ 1,4 nonbonded interactions    153600.003072    13824000.276     0.1
+ Calc Weights                 3303300.066066   118918802.378     0.7
+ Spread Q Bspline            70470401.409408   140940802.819     0.9
+ Gather F Bspline            70470401.409408   845644816.913     5.2
+ 3D-FFT                     131808802.636176  1054470421.089     6.5
+ Solve PME                    2047500.040950   131040002.621     0.8
+ NS-Pairs                    34545306.210237   725451430.415     4.5
+ Reset In Box                  106260.000000      318780.000     0.0
+ CG-CoM                        220220.022022      660660.066     0.0
+ Angles                        326400.006528    54835201.097     0.3
+ Propers                       140800.002816    32243200.645     0.2
+ Impropers                      32000.000640     6656000.133     0.0
+ RB-Dihedrals                  204800.004096    50585601.012     0.3
+ Virial                       1119100.022382    20143800.403     0.1
+ Ext.ens. Update              1101100.022022    59459401.189     0.4
+ Stop-CM                      1101100.022022    11011000.220     0.1
+ Calc-Ekin                    1101100.044044    29729701.189     0.2
+ Lincs                         405940.735957    24356444.157     0.2
+ Lincs-Mat                    5160993.061320    20643972.245     0.1
+ Constraint-V                 1599381.487664    12795051.901     0.1
+ Constraint-Vir               1193440.751707    28642578.041     0.2
+ Settle                        262500.005250    84787501.696     0.5
+-----------------------------------------------------------------------
+ Total                                       16215596046.931   100.0
+-----------------------------------------------------------------------
+
+
+    D O M A I N   D E C O M P O S I T I O N   S T A T I S T I C S
+
+ av. #atoms communicated per step for force:  2 x 38343.8
+ av. #atoms communicated per step for LINCS:  2 x 2172.7
+
+ Average load imbalance: 2.8 %
+ Part of the total run time spent waiting due to load imbalance: 1.4 %
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+ Computing:         Nodes     Number     G-Cycles    Seconds     %
+-----------------------------------------------------------------------
+ Domain decomp.         8   10000000   447533.976   160281.0     3.2
+ Comm. coord.           8   50000001   190944.900    68385.5     1.4
+ Neighbor search        8   10000001  1975343.979   707454.9    14.0
+ Force                  8   50000001  7288701.163  2610394.5    51.7
+ Wait + Comm. F         8   50000001   416186.214   149054.0     3.0
+ PME mesh               8   50000001  2790992.565   999573.4    19.8
+ Write traj.            8        694       22.451        8.0     0.0
+ Update                 8   50000001   301247.103   107889.4     2.1
+ Constraints            8   50000001   491848.965   176152.1     3.5
+ Comm. energies         8   50000001    32062.813    11483.1     0.2
+ Rest                   8              153291.047    54900.1     1.1
+-----------------------------------------------------------------------
+ Total                  8            14088175.175  5045576.0   100.0
+-----------------------------------------------------------------------
+
+	Parallel run - timing based on wallclock.
+
+               NODE (s)   Real (s)      (%)
+       Time: 630697.000 630697.000    100.0
+                       7d07h11:37
+               (Mnbf/s)   (GFlops)   (ns/day)  (hour/ns)
+Performance:    485.931     25.711     13.699      1.752
+Finished mdrun on node 0 Tue Feb 15 20:43:32 2011

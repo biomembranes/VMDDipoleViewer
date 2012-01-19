@@ -1,0 +1,3 @@
+input_file = "/local/scratch/btd1y09/gromacsfiles/UnitedCer2.psf"
+output_file = "/local/scratch/btd1y09/gromacsfiles/md3_autopsf_tmpfile_works.psf" ## read from here too
+write_file = "/local/scratch/btd1y09/gromacsfiles/segment.psf"  ## write to here

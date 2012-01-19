@@ -1,0 +1,15 @@
+;
+;	Topology file for ceramide 2
+;
+
+#include "/home/akinshina.a/bin/top/lipid_gmxnb.itp"
+#include "/home/akinshina.a/bin/top/UnitedCer2.itp"
+#include "/home/akinshina.a/bin/top/SOL.itp"
+
+[ system ]
+Ceramide 2  bilayer
+
+[ molecules ]
+;molecule name   nr.
+CER2             128
+SOL              5250

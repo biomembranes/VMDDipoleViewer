@@ -1,0 +1,256 @@
+; Gromacs topology file for ceramide 2
+
+[ moleculetype ]
+; Name nrexcl
+CER2      3
+
+[ atoms ]
+;   nr      type  resnr resid  atom  cgnr   charge     mass
+                                                             ;   H22--O21--C20   O17--H18        ;
+                                                             ;              |     |              ;
+     1       LP3     1  CER2    C1      1    0.000  15.0350  ;  O26        C19--C16              ;
+     2       LP2     1  CER2    C2      2    0.000  14.0270  ;   \\        /       \             ;
+     3       LP2     1  CER2    C3      3    0.000  14.0270  ;     C25--N23        C15           ;
+     4       LP2     1  CER2    C4      4    0.000  14.0270  ;     /       \       ||            ;
+     5       LP2     1  CER2    C5      5    0.000  14.0270  ;  C27        H24     C14           ;
+     6       LP2     1  CER2    C6      6    0.000  14.0270  ;     \                \            ;
+     7       LP2     1  CER2    C7      7    0.000  14.0270  ;     C28              C13          ;
+     8       LP2     1  CER2    C8      8    0.000  14.0270  ;     /                /            ;
+     9       LP2     1  CER2    C9      9    0.000  14.0270  ;  C29              C12             ;
+    10       LP2     1  CER2    C10    10    0.000  14.0270  ;     \                \            ;
+    11       LP2     1  CER2    C11    11    0.000  14.0270  ;    C30               C11          ;
+    12       LP2     1  CER2    C12    12    0.000  14.0270  ;     /                /            ;
+    13       LP2     1  CER2    C13    13    0.000  14.0270  ;  C31              C10             ;
+    14       CH1     1  CER2    C14    14    0.000  13.0190  ;     \                \            ;
+    15       CH1     1  CER2    C15    15    0.000  13.0190  ;    C32              C9            ;
+    16       CH1     1  CER2    C16    16    0.150  13.0190  ;     /               /             ;
+    17        OA     1  CER2    O17    16   -0.548  15.9994  ;  C33              C8              ;
+    18        HO     1  CER2    H18    16    0.398   1.0080  ;     \               \             ;
+    19       CH1     1  CER2    C19    17    0.000  13.0190  ;     C34             C7            ;
+    20       CH2     1  CER2    C20    18    0.150  14.0270  ;     /               /             ;
+    21        OA     1  CER2    O21    18   -0.548  15.9994  ;  C35              C6              ;
+    22        HO     1  CER2    H22    18    0.398   1.0080  ;     \               \             ;
+    23         N     1  CER2    N23    19   -0.280  14.0067  ;     C36             C5            ;
+    24         H     1  CER2    H24    19    0.280   1.0080  ;     /               /             ;
+    25         C     1  CER2    C25    19    0.380  12.0110  ;  C37              C4              ;
+    26         O     1  CER2    O26    19   -0.380  15.9994  ;     \               \             ;
+    27       LP2     1  CER2    C27    20    0.000  14.0270  ;     C38             C3            ;
+    28       LP2     1  CER2    C28    21    0.000  14.0270  ;     /               /             ;
+    29       LP2     1  CER2    C29    22    0.000  14.0270  ;  C39              C2              ;
+    30       LP2     1  CER2    C30    23    0.000  14.0270  ;     \               \             ;
+    31       LP2     1  CER2    C31    24    0.000  14.0270  ;     C40             C1            ;
+    32       LP2     1  CER2    C32    25    0.000  14.0270  ;     /                             ;
+    33       LP2     1  CER2    C33    26    0.000  14.0270  ;  C41                              ;
+    34       LP2     1  CER2    C34    27    0.000  14.0270  ;     \                             ;
+    35       LP2     1  CER2    C35    28    0.000  14.0270  ;     C42                           ;
+    36       LP2     1  CER2    C36    29    0.000  14.0270  ;     /                             ;
+    37       LP2     1  CER2    C37    30    0.000  14.0270  ;  C43                              ;
+    38       LP2     1  CER2    C38    31    0.000  14.0270  ;     \                             ;
+    39       LP2     1  CER2    C39    32    0.000  14.0270  ;     C44                           ;
+    40       LP2     1  CER2    C40    33    0.000  14.0270  ;     /                             ;
+    41       LP2     1  CER2    C41    34    0.000  14.0270  ;  C45                              ;
+    42       LP2     1  CER2    C42    35    0.000  14.0270  ;     \                             ;
+    43       LP2     1  CER2    C43    36    0.000  14.0270  ;     C46                           ;
+    44       LP2     1  CER2    C44    37    0.000  14.0270  ;     /                             ;
+    45       LP2     1  CER2    C45    38    0.000  14.0270  ;  C47                              ;
+    46       LP2     1  CER2    C46    39    0.000  14.0270  ;     \                             ;
+    47       LP2     1  CER2    C47    40    0.000  14.0270  ;     C48                           ;
+    48       LP2     1  CER2    C48    41    0.000  14.0270  ;     /                             ;
+    49       LP3     1  CER2    C49    42    0.000  15.0350  ;  C49                              ;
+[ bonds ]
+; ai  aj  func   b0       kb
+   1   2   1    0.153    334700.0  ; C1   C2  dppc.itp
+   2   3   1    0.153    334700.0  ; C2   C3  dppc.itp
+   3   4   1    0.153    334700.0  ; C3   C4  dppc.itp
+   4   5   1    0.153    334700.0  ; C4   C5  dppc.itp
+   5   6   1    0.153    334700.0  ; C5   C6  dppc.itp
+   6   7   1    0.153    334700.0  ; C6   C7  dppc.itp
+   7   8   1    0.153    334700.0  ; C7   C8  dppc.itp
+   8   9   1    0.153    334700.0  ; C8   C9  dppc.itp
+   9  10   1    0.153    334700.0  ; C9   C10 dppc.itp
+  10  11   1    0.153    334700.0  ; C10  C11 dppc.itp
+  11  12   1    0.153    334700.0  ; C11  C12 dppc.itp
+  12  13   1    0.153    334700.0  ; C12  C13 dppc.itp
+  13  14   1    0.153    334700.0  ; C13  C14 dppc.itp
+  14  15   1    0.139    418400.0  ; C14  C15 double-bond, Mombelli
+  15  16   1    0.153    334720.0  ; C15  C16 ffgmxbon.itp
+  16  17   1    0.143    334720.0  ; C16  O17 ffgmxbon.itp
+  16  19   1    0.153    334720.0  ; C16  C19 ffgmxbon.itp
+  17  18   1    0.100    313800.0  ; O17  H18 ffgmxbon.itp
+  19  20   1    0.153    334720.0  ; C19  C20 ffgmxbon.itp
+  19  23   1    0.147    376560.0  ; C19  N23 ffgmxbon.itp
+  20  21   1    0.143    334720.0  ; C20  O21 ffgmxbon.itp
+  21  22   1    0.100    313800.0  ; O21  H22 ffgmxbon.itp
+  23  24   1    0.100    374468.0  ; N23  H24 ffgmxbon.itp
+  23  25   1    0.133    418400.0  ; N23  C25 ffgmxbon.itp
+  25  26   1    0.123    502080.0  ; C25  O26 ffgmxbon.itp
+  25  27   1    0.153    334720.0  ; C25  C27
+  27  28   1    0.153    334700.0  ; C27  C28 dppc.itp
+  28  29   1    0.153    334700.0  ; C28  C29 dppc.itp
+  29  30   1    0.153    334700.0  ; C29  C30 dppc.itp
+  30  31   1    0.153    334700.0  ; C30  C31 dppc.itp
+  31  32   1    0.153    334700.0  ; C31  C32 dppc.itp
+  32  33   1    0.153    334700.0  ; C32  C33 dppc.itp
+  33  34   1    0.153    334700.0  ; C33  C34 dppc.itp
+  34  35   1    0.153    334700.0  ; C34  C35 dppc.itp
+  35  36   1    0.153    334700.0  ; C35  C36 dppc.itp
+  36  37   1    0.153    334700.0  ; C36  C37 dppc.itp
+  37  38   1    0.153    334700.0  ; C37  C38 dppc.itp
+  38  39   1    0.153    334700.0  ; C38  C39 dppc.itp
+  39  40   1    0.153    334700.0  ; C39  C40 dppc.itp
+  40  41   1    0.153    334700.0  ; C40  C41 dppc.itp
+  41  42   1    0.153    334700.0  ; C41  C42 dppc.itp
+  42  43   1    0.153    334700.0  ; C42  C43 dppc.itp
+  43  44   1    0.153    334700.0  ; C43  C44 dppc.itp
+  44  45   1    0.153    334700.0  ; C44  C45 dppc.itp
+  45  46   1    0.153    334700.0  ; C45  C46 dppc.itp
+  46  47   1    0.153    334700.0  ; C46  C47 dppc.itp
+  47  48   1    0.153    334700.0  ; C47  C48 dppc.itp
+  48  49   1    0.153    334700.0  ; C48  C49 dppc.itp
+
+[ pairs ]
+; ai  aj  func
+  12  15   1  ; C12  C15
+  13  16   1  ; C13  C16
+  14  17   1  ; C14  O17
+  14  19   1  ; C14  C19
+  15  18   1  ; C15  H18
+  15  20   1  ; C15  C20
+  15  23   1  ; C15  N23
+  16  21   1  ; C16  O21
+  16  24   1  ; C16  H24
+  16  25   1  ; C16  C25
+  17  20   1  ; O17  C20   
+  17  23   1  ; O17  N23   
+  18  19   1  ; H18  C19   
+  19  22   1  ; C19  H22   
+  19  26   1  ; C19  O26   
+  19  27   1  ; C19  C27   
+  20  24   1  ; C20  H24   
+  20  25   1  ; C20  C25   
+  21  23   1  ; O21  N23   
+  23  28   1  ; N23  C28   
+  24  26   1  ; H24  O26   
+  24  27   1  ; H24  C27   
+  25  29   1  ; C25  C29   
+  26  28   1  ; O26  C28   
+
+[ angles ]
+; ai  aj  ak  func  theta0   ktheta
+   1   2   3   1    111.0    460.2   ; C1   C2   C3   dppc.itp   
+   2   3   4   1    111.0    460.2   ; C2   C3   C4   dppc.itp
+   3   4   5   1    111.0    460.2   ; C3   C4   C5   dppc.itp
+   4   5   6   1    111.0    460.2   ; C4   C5   C6   dppc.itp
+   5   6   7   1    111.0    460.2   ; C5   C6   C7   dppc.itp
+   6   7   8   1    111.0    460.2   ; C6   C7   C8   dppc.itp
+   7   8   9   1    111.0    460.2   ; C7   C8   C9   dppc.itp
+   8   9  10   1    111.0    460.2   ; C8   C9   C10  dppc.itp
+   9  10  11   1    111.0    460.2   ; C9   C10  C11  dppc.itp
+  10  11  12   1    111.0    460.2   ; C10  C11  C12  dppc.itp
+  11  12  13   1    111.0    460.2   ; C11  C12  C13  dppc.itp
+  12  13  14   1    111.0    460.2   ; C12  C13  C14  dppc.itp
+  13  14  15   1    120.0    502.1   ; C13  C14  C15  double-bond, Mombelli
+  14  15  16   1    120.0    502.1   ; C14  C15  C16  double-bond, Mombelli
+  15  16  17   1    109.5    460.2   ; C15  C16  O17  ffgmxbon.itp
+  15  16  19   1    111.0    460.2   ; C15  C16  C19  ffgmxbon.itp
+  17  16  19   1    109.5    460.2   ; O17  C16  C19  ffgmxbon.itp
+  16  17  18   1    109.5    397.5   ; C16  O17  H18  ffgmxbon.itp
+  16  19  20   1    111.0    460.2   ; C16  C19  C20  ffgmxbon.itp
+  16  19  23   1    109.5    460.2   ; C16  C19  N23  ffgmxbon.itp
+  20  19  23   1    109.5    460.2   ; C20  C19  N23  ffgmxbon.itp
+  19  20  21   1    109.5    460.2   ; C19  C20  O21  ffgmxbon.itp
+  20  21  22   1    109.5    397.5   ; C20  O21  H22  ffgmxbon.itp
+  19  23  24   1    115.0    376.6   ; C19  N23  H24  ffgmxbon.itp
+  19  23  25   1    122.0    502.1   ; C19  N23  C25  ffgmxbon.itp
+  24  23  25   1    123.0    292.9   ; H24  N23  C25  ffgmxbon.itp
+  23  25  26   1    124.0    502.1   ; N23  C25  O26  ffgmxbon.itp
+  23  25  27   1    115.0    502.1   ; N23  C25  C27  
+  26  25  27   1    121.0    502.1   ; O26  C25  C27   
+  25  27  28   1    111.0    460.2   ; C25  C27  C28   
+  27  28  29   1    111.0    460.2   ; C27  C28  C29  dppc.itp 
+  28  29  30   1    111.0    460.2   ; C28  C29  C30  dppc.itp
+  29  30  31   1    111.0    460.2   ; C29  C30  C31  dppc.itp
+  30  31  32   1    111.0    460.2   ; C30  C31  C32  dppc.itp
+  31  32  33   1    111.0    460.2   ; C31  C32  C33  dppc.itp
+  32  33  34   1    111.0    460.2   ; C32  C33  C34  dppc.itp
+  33  34  35   1    111.0    460.2   ; C33  C34  C35  dppc.itp
+  34  35  36   1    111.0    460.2   ; C34  C35  C36  dppc.itp
+  35  36  37   1    111.0    460.2   ; C35  C36  C37  dppc.itp
+  36  37  38   1    111.0    460.2   ; C36  C37  C38  dppc.itp
+  37  38  39   1    111.0    460.2   ; C37  C38  C39  dppc.itp
+  38  39  40   1    111.0    460.2   ; C38  C39  C40  dppc.itp
+  39  40  41   1    111.0    460.2   ; C39  C40  C41  dppc.itp
+  40  41  42   1    111.0    460.2   ; C40  C41  C42  dppc.itp
+  41  42  43   1    111.0    460.2   ; C41  C42  C43  dppc.itp
+  42  43  44   1    111.0    460.2   ; C42  C43  C44  dppc.itp
+  43  44  45   1    111.0    460.2   ; C43  C44  C45  dppc.itp
+  44  45  46   1    111.0    460.2   ; C44  C45  C46  dppc.itp
+  45  46  47   1    111.0    460.2   ; C45  C46  C47  dppc.itp
+  46  47  48   1    111.0    460.2   ; C46  C47  C48  dppc.itp
+  47  48  49   1    111.0    460.2   ; C47  C48  C49  dppc.itp
+
+[ dihedrals ]
+; Proper dihedrals
+; ai  aj  ak  al  func    phi0    kphi    mult 
+   4   3   2   1   3                            ; RB    C4   C3   C2   C1   lipid.itp
+   5   4   3   2   3                            ; RB    C5   C4   C3   C2   lipid.itp
+   6   5   4   3   3                            ; RB    C6   C5   C4   C3   lipid.itp
+   7   6   5   4   3                            ; RB    C7   C6   C5   C4   lipid.itp
+   8   7   6   5   3                            ; RB    C8   C7   C6   C5   lipid.itp
+   9   8   7   6   3                            ; RB    C9   C8   C7   C6   lipid.itp
+  10   9   8   7   3                            ; RB    C10  C9   C8   C7   lipid.itp
+  11  10   9   8   3                            ; RB    C11  C10  C9   C8   lipid.itp
+  12  11  10   9   3                            ; RB    C12  C11  C10  C9   lipid.itp
+  13  12  11  10   3                            ; RB    C13  C12  C11  C10  lipid.itp
+  14  13  12  11   3                            ; RB    C14  C13  C12  C11  lipid.itp
+  15  14  13  12   1      0.0     5.858    3    ; dih   C15  C14  C13  C12
+  19  16  15  14   1      0.0     2.929    3    ; dih   C19  C16  C15  C14  ffgmxbon.itp
+  17  16  15  14   1      0.0     2.929    3    ; dih   O17  C16  C15  C14  ffgmxbon.itp
+  15  16  17  18   1      0.0     0.628    3    ; dih   C15  C16  O17  H18  ffgmxbon.itp
+  19  16  17  18   1      0.0     0.628    3    ; dih   C19  C16  O17  H18  ffgmxbon.itp
+  23  19  16  15   1      0.0     1.466    3    ; dih   N23  C19  C16  C15  ffgmxbon.itp
+  23  19  16  17   1      0.0     1.466    3    ; dih   N23  C19  C16  O17  ffgmxbon.itp
+  20  19  16  15   1      0.0     1.466    3    ; dih   C20  C19  C16  C15  ffgmxbon.itp
+  20  19  16  17   1      0.0     1.466    3    ; dih   C20  C19  C16  O17  ffgmxbon.itp
+  21  20  19  16   1      0.0     2.929    3    ; dih   O21  C20  C19  C16  ffgmxbon.itp
+  21  20  19  23   1      0.0     2.929    3    ; dih   O21  C20  C19  N23  ffgmxbon.itp
+  16  19  23  25   1    180.0     0.105    6    ; dih   C16  C19  N23  C25  ffgmxbon.itp
+  16  19  23  24   1    180.0     0.105    6    ; dih   C16  C19  N23  H24  ffgmxbon.itp
+  20  19  23  25   1    180.0     0.105    6    ; dih   C20  C19  N23  C25  ffgmxbon.itp
+  20  19  23  24   1    180.0     0.105    6    ; dih   C20  C19  N23  H24  ffgmxbon.itp
+  19  20  21  22   1      0.0     1.255    3    ; dih   C19  C20  O21  H22  ffgmxbon.itp
+  27  25  23  19   1    180.0     8.368    2    ; dih   C27  C25  N23  C19  ffgmxbon.itp
+  27  25  23  24   1    180.0     8.368    2    ; dih   C27  C25  N23  H24  ffgmxbon.itp
+  26  25  23  19   1    180.0     8.368    2    ; dih   O26  C25  N23  C19  ffgmxbon.itp
+  26  25  23  24   1    180.0     8.368    2    ; dih   O26  C25  N23  H24  ffgmxbon.itp
+  28  27  25  23   1      0.0     0.209    6    ; dih   C28  C27  C25  N23  ffgmxbon.itp
+  28  27  25  26   1      0.0     0.209    6    ; dih   C28  C27  C25  O26  ffgmxbon.itp
+  29  28  27  25   3                            ; RB    C29  C28  C27  C25  lipid.itp
+  30  29  28  27   3                            ; RB    C30  C29  C28  C27  lipid.itp
+  31  30  29  28   3                            ; RB    C31  C30  C29  C28  lipid.itp
+  32  31  30  29   3                            ; RB    C32  C31  C30  C29  lipid.itp 
+  33  32  31  30   3                            ; RB    C33  C32  C31  C30  lipid.itp
+  34  33  32  31   3                            ; RB    C34  C33  C32  C31  lipid.itp
+  35  34  33  32   3                            ; RB    C35  C34  C33  C32  lipid.itp
+  36  35  34  33   3                            ; RB    C36  C35  C34  C33  lipid.itp
+  37  36  35  34   3                            ; RB    C37  C36  C35  C34  lipid.itp
+  38  37  36  35   3                            ; RB    C38  C37  C36  C35  lipid.itp
+  39  38  37  36   3                            ; RB    C39  C38  C37  C36  lipid.itp
+  40  39  38  37   3                            ; RB    C40  C39  C38  C37  lipid.itp
+  41  40  39  38   3                            ; RB    C41  C40  C39  C38  lipid.itp
+  42  41  40  39   3                            ; RB    C42  C41  C40  C39  lipid.itp
+  43  42  41  40   3                            ; RB    C43  C42  C41  C40  lipid.itp
+  44  43  42  41   3                            ; RB    C44  C43  C42  C41  lipid.itp
+  45  44  43  42   3                            ; RB    C45  C44  C43  C42  lipid.itp
+  46  45  44  43   3                            ; RB    C46  C45  C44  C43  lipid.itp
+  47  46  45  44   3                            ; RB    C47  C46  C45  C44  lipid.itp
+  48  47  46  45   3                            ; RB    C48  C47  C46  C45  lipid.itp
+  49  48  47  46   3                            ; RB    C49  C48  C47  C46  lipid.itp
+; Improper dihedrals
+; ai  aj  ak  al  func   phi0    kphi 
+  23  19  24  25   2     0.0    167.36          ; imp   N23  C19  H24  C25   
+  25  23  27  26   2     0.0    167.36          ; imp   C25  N23  C27  O26   
+  16  15  19  17   2    35.264   83.68          ; imp   C16  C15  C19  O17   
+  19  16  20  23   2    35.264   83.68          ; imp   C19  C16  C20  N23
+  16  13  15  14   2     0.0    167.36          ; imp   C16  C13  C15  C14  trans double-bond, Mombelli
+
